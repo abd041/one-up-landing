@@ -1,0 +1,14 @@
+/* App.css */
+.app {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme{
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dark-theme {
+  background: #0D0D0D;
+  color: #ffffff;
+}

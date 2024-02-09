@@ -1,0 +1,28 @@
+
+
+.toggle-main-wrapper {
+  display: flex;
+  height: 38px;
+  padding: 1px 34px 1px 1px;
+align-items: center;
+  border-radius: 55px;
+  border: 1px solid #545454;
+  background: #1b1b1b;
+}
+
+
+.toggle-main-white{
+    display: flex;
+height: 38px;
+padding: 1px 1px 1px 34px;
+justify-content: flex-end;
+align-items: center;
+border-radius: 55px;
+border: 1px solid var(--Secondary-200, #C3D4E9);
+background: #FFF;
+}
+
+
+.nav-toggle-theme{
+    margin-right: 24px;
+}

@@ -1,0 +1,121 @@
+.Join_now_main_wrapper {
+  max-height: 821px;
+  background-image: url("../../assets/dark/Join_Now/Join_Now.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.join-page-main-heading > h3 > span {
+  color: var(--Primary-500, #5573d1);
+
+  /* Bold/Type@72 */
+  font-family: Satoshi;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+}
+
+.join-page-main-heading > h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  margin-bottom: 8px;
+}
+
+.join-page-main-wrap-heading {
+  padding-top: 144px;
+}
+
+.join-page-main-para > p {
+  color: var(--body-txt, #b2b2b2);
+  text-align: center;
+
+  /* Medium/Type20 */
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+.join-now-btn-wrapper {
+  margin-top: 39px;
+  display: flex;
+  justify-content: center;
+}
+
+.join-create-account-btn {
+  display: flex;
+  height: 50px;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--Secondary-400, #363f5e);
+  background: var(--Primary-0, #fff);
+  color: var(--Secondary-500, #242c3d);
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 17.6px */
+  letter-spacing: -0.32px;
+}
+
+.Join_now_image_main_wrapper {
+  width: 100%;
+  max-height: 350px;
+  margin-top: 154px;
+  overflow: hidden;
+}
+
+.Join_now_image_main_wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .join-page-main-wrap-heading {
+    padding-top: 56px;
+  }
+
+  .join-page-main-heading > h3 {
+    color: #fff;
+    text-align: center;
+
+    /* Bold/Type@24 */
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+  .join-page-main-heading > h3 > span {
+    text-align: center;
+
+    /* Bold/Type@24 */
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+
+  .Join_now_image_main_wrapper {
+    margin-top: 56px;
+  }
+}

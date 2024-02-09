@@ -1,0 +1,148 @@
+.strategy-main-wrapper {
+  padding: 180px 0px;
+}
+
+.strategy-main-heading {
+  max-width: 446px;
+  padding-left: 10px;
+  border-left: 10px solid #6984d6;
+  margin-bottom: 56px;
+}
+
+.strategy-main-heading > h4 {
+  color: var(--Primary-0, #fff);
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+  margin-bottom: 0px;
+}
+
+.strategy-card-first-main-wrapper {
+  max-width: 410px;
+  height: 238px;
+  border-radius: 12px;
+  background: #212121;
+}
+
+.strategy-card-main-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/dark/Homepage/card_bg.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-position: center bottom; /* Position the background image at the center horizontally and at the bottom vertically */
+  background-size: cover;
+}
+
+.strategy-card-main-wrapper-two {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/dark/Homepage/bg_2.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-position: center bottom; /* Position the background image at the center horizontally and at the bottom vertically */
+  background-size: cover;
+}
+.strategy-card-main-wrapper-three {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/dark/Homepage/bg_3.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-position: center bottom; /* Position the background image at the center horizontally and at the bottom vertically */
+  background-size: cover;
+}
+
+.strategy-card-second-main-wrapper {
+  padding: 12px;
+}
+
+.card-fisrt-heading > h4 {
+  color: var(--Primary-0, #fff);
+
+  /* Bold/Type@24 */
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.72px;
+  margin-bottom: 0px;
+}
+
+.card-second-heading > h5 {
+  color: #afff48;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+
+.strategy-card-bottom {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strategy-card-bottom-heading > h4 {
+  color: var(--Primary-0, #fff);
+
+  /* Bold/Type@24 */
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+
+.strategy-card-bottom-heading {
+  max-width: 284px;
+}
+
+.startegy-card-btn {
+  display: flex;
+  width: 68px;
+  height: 48px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+
+@media screen and (max-width : 768px) {
+  .strategy-main-wrapper{
+    padding: 56px 0px;
+  }
+  
+  .strategy-card-first-main-wrapper{
+    margin-bottom: 39px;
+  }
+  .strategy-main-heading > h4 {
+    color: var(--Primary-0, #FFF);
+
+    /* Bold/Type@24 */
+    font-family: Satoshi;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,89 @@
+.Homepage-Hero-warpper-dark {
+  background: #121212;
+}
+
+.hero-main-heading {
+  margin-bottom: 24px;
+}
+
+.hero-main-heading > h4 {
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  background: radial-gradient(
+    112.72% 109.28% at 64.84% 30.41%,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0px;
+}
+
+.hero-main-desc {
+  margin-bottom: 47px;
+}
+
+.hero-main-desc > p {
+  color: #b7b7b7;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  margin-bottom: 0px;
+}
+
+.hero-section-btn {
+  max-width: 413px;
+  gap: 8px;
+  flex: 1 0 0;
+
+}
+
+
+.hero-section-main-wrapper{
+    max-width: 1041px;
+    margin-top: 255px;
+}
+
+.hero-section-btn > button {
+  width: 100%;
+  color: var(--Primary-0, #fff);
+  text-align: center;
+  height: 63px;
+  padding: 13px 24px;
+  /* Semibold/Type@18 */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  border-radius: 8px;
+border: 1px solid var(--Primary-0, #FFF);
+background: transparent;
+}
+
+
+.expert-team-hero-section{
+    margin-top: 230px;
+    padding: 39px 0px;
+}
+
+@media screen and (max-width : 768px) {
+  
+  .hero-section-main-wrapper{
+    margin-top: 127px;
+}
+.expert-team-hero-section{
+  margin-top: 145px;
+}
+}

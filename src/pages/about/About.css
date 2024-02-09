@@ -1,0 +1,120 @@
+.about-page-main-wrapper-dark {
+  background: #121212;
+  width: 100%;
+}
+
+.about-main-heading-row {
+  padding-top: 80px;
+  margin-bottom: 24px;
+}
+
+.about-page-main-heading > h3 > span {
+  color: var(--Primary-500, #5573d1);
+
+  /* Bold/Type@72 */
+  font-family: Satoshi;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+}
+
+.about-page-main-heading > h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  margin-bottom: 8px;
+}
+
+.about-page-main-para > p {
+  color: var(--body-txt, #b2b2b2);
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+.about-stop-lossing-image-dark {
+  max-width: 800px;
+  height: 569px;
+  padding: 7px 13px 7px 12px;
+  margin-bottom: 24px;
+}
+
+.about-stop-lossing-image-dark > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #e0e0e0;
+}
+
+.about-below-image-para {
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+.about-below-image-para > p {
+  max-width: 800px;
+  color: var(--body-txt, #b2b2b2);
+  text-align: justify;
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.image-following-para-text {
+  margin-bottom: 56px;
+}
+
+.expert-team-row-wrapper {
+  padding: 80px 0px;
+}
+.expert-team-haeding{
+    margin-bottom: 39px;
+}
+
+.expert-team-haeding > h1 {
+  color: #666;
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+
+.expert-team-images-wrape{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+
+@media screen and (max-width : 992px) {
+    .expert-team-image-five{
+        display: none;
+    }
+    .expert-team-first-image{
+        display: none;
+    }
+
+    .about-stop-lossing-image-dark{
+      height: auto;
+    }
+}

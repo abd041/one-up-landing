@@ -1,0 +1,65 @@
+.switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 70px;
+  height: var(--9, 36px);
+  border-radius: 30px;
+  border: 1px solid #d5dbee;
+  background: #6984d6;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.switch-label .switch-button {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: var(--7, 28px);
+  height: var(--7, 28px);
+  flex-shrink: 0;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: black;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.switch-checkbox:checked + .switch-label .switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.switch-label:active .switch-button {
+  width: 60px;
+}
+
+.pricing-toggle-main-warpper {
+  margin-bottom: 25px;
+}
+
+.yealy-save-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 39px;
+}
+
+.yealy-save-heading > h5 {
+  color: #fff;
+
+  /* Medium/Type@14 */
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+

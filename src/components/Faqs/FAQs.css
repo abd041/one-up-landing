@@ -1,0 +1,110 @@
+.faqs-main-row-wrap {
+  padding: 110px 0px;
+}
+
+.faqs-main-heading > h4 {
+  color: var(--Primary-0, #fff);
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+}
+
+.faqs-content-main-wrapper {
+    max-width: 776px;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 2px solid var(--Primary-0, #fff);
+  margin-top: 24px;
+}
+
+
+.faqs-content-main-wrapper-inactive {
+    max-width: 776px;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+border: none;
+}
+
+
+.faqs-content-main-heading-main-wrapper{
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--body-txt, #B2B2B2);
+}
+.faqs-content-main-heading > h4{
+    color: var(--Primary-0, #FFF);
+
+/* Semibold/Type@20 */
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 22px */
+letter-spacing: -0.4px;
+
+}
+
+
+.faqs-text-heading > p{
+    color: #AAADB1;
+
+/* Medium/Type@16 */
+font-family: Satoshi;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.32px;
+margin-bottom: 0px;
+}
+
+.faqs-text-heading-inactive{
+    display: none;
+}
+
+
+.faqs-main-links > a{
+  color: var(--Primary-500, #5573D1);
+
+/* Bold/Type@16 */
+font-family: Satoshi;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 17.6px */
+letter-spacing: -0.32px;
+text-decoration: none;
+}
+.faqs-main-links > a > span{
+  margin-right: 12px;
+}
+
+
+@media screen and (max-width : 768px) {
+  .faqs-main-row-wrap {
+    padding: 56px 0px;
+  }
+
+  
+.faqs-main-heading > h4 {
+  color: var(--Primary-0, #fff);
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+}
+  
+}

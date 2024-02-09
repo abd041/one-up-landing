@@ -1,0 +1,315 @@
+.pricing-page-main-wrapper-dark {
+  background: #121212;
+  width: 100%;
+}
+.pricing-main-container-wrapper{
+  padding: 68px 0px;
+}
+
+
+.pricing-card-main-wrap {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--Secondary-400, #596780);
+  max-width: 373px;
+  min-height: 631px;
+  margin-bottom: 39px;
+}
+
+.pricing-first-heading-wrap {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.pricing-first-heading-image > img {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.pricing-first-heading-main > h4 {
+  color: #fff;
+
+  /* Semibold/Type@32 */
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 35.2px */
+  letter-spacing: -0.96px;
+  margin-bottom: 0px;
+}
+.pricing-desc {
+  margin-bottom: 24px;
+}
+
+.pricing-desc > p {
+  color: var(--body-txt, #b2b2b2);
+
+  /* Regular/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+}
+
+.pricing-main-value {
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #1d334f;
+}
+
+.pricing-main-value > h1 {
+  margin-bottom: 0px;
+  color: #fff;
+  text-align: center;
+
+  /* Semibold/Type@40 */
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+}
+
+.pricing-main-value > h1 > span {
+  color: var(--body-txt, #b2b2b2);
+
+  /* Medium/Type@18 */
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.princing-description {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.princing-description > p {
+  color: var(--body-txt, #b2b2b2);
+
+  /* Medium/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+}
+
+.tick-image-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.tick-main-heading > h4 {
+  margin-bottom: 0px;
+  color: var(--Primary-0, #fff);
+
+  /* Medium/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+.tick-main-wrapper > img {
+  width: 24px;
+
+  height: 24px;
+  margin-right: 12px;
+}
+
+.pricing-main-heading {
+  margin-bottom: 18px;
+}
+
+.pricing-main-heading > h4 {
+  color: #fff;
+  text-align: center;
+
+  /* Bold/Type@40 */
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+  margin-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.pricing-main-description {
+  margin-bottom: 39px;
+}
+.pricing-main-description > h3 {
+  color: var(--Secondary-100, #f3f5f7);
+  text-align: center;
+
+  /* Regular/Type@20 */
+  font-family: Satoshi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+  margin-bottom: 0px;
+}
+
+.pricing-monthly-heading > h4 {
+  color: #fff;
+
+  /* Semibold/Type@20 */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 22px */
+  letter-spacing: -0.4px;
+  margin-bottom: 0px;
+  margin-right: 16px;
+}
+
+.pricing-yearly-heading > h5 {
+  color: #fff;
+
+  /* Semibold/Type@20 */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 22px */
+  letter-spacing: -0.4px;
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+.open-account-btn-wrapper {
+  max-width: 520px;
+  height: 52px;
+  margin-bottom: 80px;
+}
+
+.open-account-btn-wrapper > button {
+  display: flex;
+  border: none;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #5573d1 0%, #1038b2 100%);
+  color: var(--Primary-0, #fff);
+  text-align: center;
+
+  /* Semibold/Type@16 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+
+.pricing-additional-information {
+  margin-bottom: 24px;
+}
+
+.pricing-additional-information > h5 {
+  margin-bottom: 0px;
+}
+
+.pricing-additional-cancellation-pricing {
+  margin-bottom: 24px;
+}
+
+.pricing-additional-cancellation-pricing > p {
+  color: var(--Primary-0, #fff);
+
+  /* Regular/Type@18 */
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  margin-bottom: 0px;
+}
+
+.pricing-additional-cancellation-pricing > p > span {
+  color: var(--Primary-0, #fff);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  margin-bottom: 0px;
+}
+
+.pricing-additional-information-main-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border: 1px solid var(--Secondary-500, #1a202c);
+  background: #121212;
+}
+
+.pricing-additional-info-btn {
+  width: 380px;
+  height: 50px;
+}
+
+.pricing-additional-info-btn > button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 6px;
+  border: 1px solid var(--Primary-0, #fff);
+  background: #121212;
+  color: var(--Primary-0, #fff);
+  text-align: center;
+
+  /* Semibold/Type@16 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .pricing-additional-info-btn {
+        width: 100%;
+    }
+    .pricing-main-container-wrapper{
+      padding: 40px 0px;
+    }
+
+    .open-account-btn-wrapper{
+      margin-bottom: 0px;
+    }
+}

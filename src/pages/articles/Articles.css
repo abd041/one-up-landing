@@ -1,0 +1,175 @@
+.articles-page-main-wrapper-dark {
+  background: #121212;
+}
+
+.articles-page-first-container {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.article-resources-heading > h6 {
+  color: var(--Primary-0, #fff);
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  margin-bottom: 4px;
+}
+
+.article-investing-heading > h1 {
+  color: var(--Primary-0, #fff);
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 44px */
+  letter-spacing: -1.2px;
+  margin-bottom: 8px;
+}
+
+.article-investing-discover > p {
+  color: var(--body-txt, #b2b2b2);
+
+  /* Medium/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+}
+
+.article-resousrce-first-wrapper {
+  margin-bottom: 14px;
+}
+
+.articles-card-main-wrapper {
+  padding: 24px;
+  border-radius: 17px;
+  border: 1px solid #303030;
+  background: #121212;
+  max-width: 628px;
+}
+
+.articles-card-main-heading > h3 {
+  color: var(--Primary-0, #fff);
+
+  /* Bold/Type@24 */
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+
+.articles-card-main-para {
+  color: var(--body-txt, #b2b2b2);
+  margin-bottom: 12px;
+}
+.articles-card-main-para > p {
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+
+  /* Limit text to two lines and add ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to two lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.articles-card-main-btn {
+  display: flex;
+  width: 48px;
+  height: 50px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #4d4d4e;
+  background-color: #0d0d0d00;
+}
+
+.articles-card-main-wrapper:hover {
+  background: #212121;
+}
+
+.articles-card-main-btn:hover {
+  border-radius: 100px;
+  border: 1px solid #363f5e;
+  background: var(--Primary-0, #fff);
+  display: flex;
+  width: 60px;
+  height: 50px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.articles-card-main-btn:hover > img {
+  filter: brightness(0.5);
+}
+
+.article-card-first-row {
+  margin-bottom: 39px;
+}
+
+.expert-team-wrapper-articles {
+  border: 1px solid var(--Secondary-500, #1a202c);
+  background: #121212;
+}
+
+@media screen and (max-width: 768px) {
+  .article-card-first-row {
+    margin-bottom: 0px;
+  }
+
+  .articles-card-main-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .article-resources-heading > h6 {
+    color: var(--Primary-0, #fff);
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .article-investing-heading > h1 {
+    color: var(--Primary-0, #fff);
+    text-align: center;
+    font-family: Satoshi;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 44px */
+    letter-spacing: -1.2px;
+  }
+
+  .article-investing-discover {
+    color: var(--body-txt, #b2b2b2);
+    text-align: center;
+
+    /* Medium/Type@16 */
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.32px;
+  }
+}

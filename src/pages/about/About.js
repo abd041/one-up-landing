@@ -10,6 +10,7 @@ import FAQs from "../../components/Faqs/FAQs";
 import { JoinNow } from "../../components/JoinNow/JoinNow";
 import Navigation from "../../components/Nav/Navigation";
 import Footer from "../../components/Footer/Footer";
+import bg_article from "../../assets/dark/about/bg_article.png"
 const About = () => {
   const { theme } = useTheme();
   return (
@@ -24,14 +25,14 @@ const About = () => {
               </h3>
             </div>
             <div className="about-page-main-para">
-              <p>Read the whole Ideation behind oneup’s within 5 min</p>
+              {/* <p>Read the whole Ideation behind oneup’s within 5 min</p> */}
             </div>
           </Col>
         </Row>
         <Row>
           <Col className="d-flex justify-content-center mx-auto" lg={8}>
             <div className="about-stop-lossing-image-dark">
-              <img src={about_stop_lossing} alt="..." />
+              <img src={bg_article} alt="..." />
             </div>
           </Col>
         </Row>

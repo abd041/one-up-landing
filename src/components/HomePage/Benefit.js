@@ -105,7 +105,7 @@ const Benefit = () => {
                 </div>
                 <div className="benefit-btn-main-wrapper">
                   <button>
-                    Automate Your Investments <img src={arrow} />
+                    Tailor your portfolio <img src={arrow} />
                   </button>
                 </div>
               </div>

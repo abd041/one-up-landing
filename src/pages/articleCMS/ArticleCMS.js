@@ -15,6 +15,7 @@ import arrow_down from "../../assets/dark/articles/arrow-down.png";
 import ExpertTeam from "../about/ExpertTeam";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import updated from "../../assets/dark/about/updated.png";
 
 const ArticleCMS = () => {
   const { theme } = useTheme();
@@ -145,7 +146,7 @@ const ArticleCMS = () => {
         <Row>
           <Col className="d-flex justify-content-center mx-auto" lg={8}>
             <div className="about-stop-lossing-image-dark">
-              <img src={about_stop_lossing} alt="..." />
+              <img src={updated} alt="..." />
             </div>
           </Col>
         </Row>

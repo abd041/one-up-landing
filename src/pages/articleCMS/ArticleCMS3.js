@@ -3,7 +3,6 @@ import { ListGroup } from "react-bootstrap";
 import { useTheme } from "../../ThemeContext";
 import "./ArticleCMS.css";
 import { Container, Row, Col } from "react-bootstrap";
-import about_stop_lossing from "../../assets/dark/about/about-stop-lossing.png";
 import AbouPara from "../../components/About/AbouPara";
 import FAQs from "../../components/Faqs/FAQs";
 import { JoinNow } from "../../components/JoinNow/JoinNow";
@@ -16,7 +15,7 @@ import arrow_down from "../../assets/dark/articles/arrow-down.png";
 import ExpertTeam from "../about/ExpertTeam";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import art2 from "../../assets/dark/articles/art2.png";
+
 const ArticleCMS3 = () => {
   const { theme } = useTheme();
   const [headings, setHeadings] = useState([]);

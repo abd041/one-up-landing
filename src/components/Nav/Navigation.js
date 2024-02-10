@@ -5,6 +5,7 @@ import arrow from "../../assets/dark/arrow-down.png";
 import ThemeToggle from "../../ToggleButton";
 import bars from "../../assets/dark/mobile navigation/bars.png";
 import { Link } from "react-router-dom";
+
 const Navigation = () => {
   const [showResource, setShowResource] = useState(false);
   const [showNav, setShowNavbar] = useState(false);
@@ -22,13 +23,13 @@ const Navigation = () => {
             <h1 className="navigation-first-heading">Home</h1>
           </Link>
           <Link to="/pricing">
-            <h1 className="navigation-second-heading">Pricing</h1>
+            <h1 className="navigation-first-heading">Pricing</h1>
           </Link>
           <h1
             className="navigation-resources-heading"
             onClick={() => setShowResource(!showResource)}
           >
-            Resource <img src={arrow} />
+            Resources <img src={arrow} />
             <div
               className={
                 showResource ? "navigation-resource-wrapper" : "d-none"

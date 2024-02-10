@@ -30,11 +30,6 @@ const AppContent = () => {
   return (
     <Router>
       <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
-        {/* <NavToggle
-           isOn={checked}
-           handleToggle={() => setChecked(!checked)}
-           colorOne="#6984D6"
-           colorTwo="#6984D6"/> */}
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />

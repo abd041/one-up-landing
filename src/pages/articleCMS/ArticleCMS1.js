@@ -14,7 +14,7 @@ import arrow_down from "../../assets/dark/articles/arrow-down.png";
 import ExpertTeam from "../about/ExpertTeam";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import art2 from "../../assets/dark/articles/art2.png";
+import art2 from "../../assets/dark/about/smarter.png";
 
 const ArticleCMS1 = () => {
   const { theme } = useTheme();
@@ -76,7 +76,7 @@ const ArticleCMS1 = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
- return (
+  return (
     <div
       className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}
       ref={contentRef}

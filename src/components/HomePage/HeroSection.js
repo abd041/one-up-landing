@@ -10,6 +10,8 @@ import expert_four from "../../assets/dark/about/expert_four.png";
 import expert_five from "../../assets/dark/about/expert_five.png";
 
 import arrow from "../../assets/dark/Homepage/arrow-right.png";
+import Line1 from "../../assets/dark/Homepage/line.png"
+import Line2 from "../../assets/dark/Homepage/line1.png"
 const Hero = () => {
   const { theme } = useTheme();
   return (
@@ -18,6 +20,11 @@ const Hero = () => {
         <Row>
           <Col>
             <div className="hero-section-main-wrapper mx-auto">
+               <div className="hero-lines-wrapper-second"> <img src={Line2}/></div>
+              <div className="hero-lines-wrapper">
+               <div><img src={Line1}/></div>
+              
+                </div>
               <div className="hero-main-heading d-flex justify-content-center">
                 <h4>Stop loosing $100,000’s.</h4>
               </div>

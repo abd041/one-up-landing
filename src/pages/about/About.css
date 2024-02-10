@@ -117,4 +117,31 @@
     .about-stop-lossing-image-dark{
       height: auto;
     }
+
+
+    
+.about-page-main-heading > h3 > span {
+  color: var(--Primary-500, #5573d1);
+
+  /* Bold/Type@72 */
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+}
+
+.about-page-main-heading > h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  margin-bottom: 8px;
+}
+
 }

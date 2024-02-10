@@ -1,5 +1,7 @@
 .navigation-main-wrapper {
   width: 100%;
+  position: relative;
+  z-index: 99999;
 }
 
 .navigation-second-wrapper {
@@ -191,6 +193,7 @@ display: none;
     left: 0;
     width: 100vw;
   display: block;
+  z-index: 9999;
   }
   
   .mobik-nav-wrapp {

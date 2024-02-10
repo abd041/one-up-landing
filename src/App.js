@@ -12,6 +12,9 @@ import ArticleCMS from './pages/articleCMS/ArticleCMS';
 import Pricing from './pages/pricing/Pricing';
 import Error from './pages/error/Error';
 import NavToggle from './components/NavToggle/NavToggle';
+import ArticleCMS1 from './pages/articleCMS/ArticleCMS1';
+import ArticleCMS2 from './pages/articleCMS/ArticleCMS2';
+import ArticleCMS3 from './pages/articleCMS/ArticleCMS3';
 
 
 const AppContent = () => {
@@ -37,6 +40,9 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Articles />} />
           <Route path='/ArticleCMS' element={<ArticleCMS />} />
+          <Route path='/ArticleCMS1' element={<ArticleCMS1 />} />
+          <Route path='/ArticleCMS2' element={<ArticleCMS2 />} />
+          <Route path='/ArticleCMS3' element={<ArticleCMS3 />} />
           <Route path='/pricing' element={<Pricing/>}/>
           <Route path='/error' element={<Error/>}/>
         </Routes>

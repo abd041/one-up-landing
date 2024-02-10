@@ -1,5 +1,5 @@
 .toc-container {
-  position: fixed;
+  position: absolute;
   top: 80px;
   max-height: calc(100vh - 20px);
 }
@@ -176,4 +176,16 @@ margin-bottom: 0px;
 
 .date-in-article-main{
   margin-bottom: 24px;
+}
+
+
+@media screen and (max-width : 768px) {
+  .toc-container {
+   display: none;
+  }
+
+  .aricle-cms-main-heading{
+    display: none;
+  }
+  
 }

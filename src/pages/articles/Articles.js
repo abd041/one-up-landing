@@ -8,6 +8,7 @@ import { JoinNow } from "../../components/JoinNow/JoinNow";
 import FAQs from "../../components/Faqs/FAQs";
 import Navigation from "../../components/Nav/Navigation";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const { theme } = useTheme();
@@ -15,6 +16,7 @@ const Articles = () => {
     <div className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}>
       <Navigation />
       <Container className="articles-page-first-container mx-sm-auto mx-0">
+      
         <Row>
           <Col className="article-resousrce-first-wrapper">
             <div className="article-resources-heading">
@@ -33,7 +35,8 @@ const Articles = () => {
         </Row>
         <Row className="article-card-first-row">
           <Col lg={6}>
-            <div className="articles-card-main-wrapper">
+          <Link to="/ArticleCMS">
+          <div className="articles-card-main-wrapper">
               <div className="articles-card-main-heading">
                 <h3>
                   The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over
@@ -56,10 +59,13 @@ const Articles = () => {
                 </button>
               </div>
             </div>
+          </Link>
+        
           </Col>
 
           <Col lg={6}>
-            <div className="articles-card-main-wrapper">
+          <Link to="/ArticleCMS1">
+          <div className="articles-card-main-wrapper">
               <div className="articles-card-main-heading">
                 <h3>
                   Unveiling a New Era in Investment: The Collective Intelligence
@@ -82,11 +88,15 @@ const Articles = () => {
                 </button>
               </div>
             </div>
+          </Link>
+       
           </Col>
         </Row>
         <Row>
           <Col lg={6}>
-            <div className="articles-card-main-wrapper">
+
+          <Link to="/ArticleCMS2">
+          <div className="articles-card-main-wrapper">
               <div className="articles-card-main-heading">
                 <h3>
                   Active vs Passive Management: balancing fees for investor
@@ -108,10 +118,13 @@ const Articles = () => {
                 </button>
               </div>
             </div>
+          </Link>
+           
           </Col>
 
           <Col lg={6}>
-            <div className="articles-card-main-wrapper">
+          <Link to="/ArticleCMS3">
+          <div className="articles-card-main-wrapper">
               <div className="articles-card-main-heading">
                 <h3>
                   Empowering investors with full control: the OneUp commitment
@@ -132,6 +145,8 @@ const Articles = () => {
                 </button>
               </div>
             </div>
+          </Link>
+           
           </Col>
         </Row>
       </Container>

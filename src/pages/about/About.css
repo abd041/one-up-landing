@@ -101,7 +101,19 @@
 .expert-team-images-wrape{
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: hidden !important;
+    animation: moveRight 30s linear infinite;
+    width: 100%;
+}
+
+
+@keyframes moveRight {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
 }
 
 

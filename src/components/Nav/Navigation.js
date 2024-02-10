@@ -97,14 +97,14 @@ const Navigation = () => {
 
           <h1 className="navigation-first-heading-mobile">RESOURCES</h1>
           <Link to="/ArticleCMS" className="mobile-article-heading">
-            Empowering investors with full control
+            The Silent Threat
           </Link>
           <Link to="/ArticleCMS1" className="mobile-article-heading">
-            Empowering investors with full control
+            Unveiling a New Era in Investment
           </Link>
 
           <Link to="/ArticleCMS2" className="mobile-article-heading">
-            Empowering investors with full control
+            Active vs Passive Management
           </Link>
           <Link to="/ArticleCMS3" className="mobile-article-heading">
             Empowering investors with full control

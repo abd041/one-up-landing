@@ -44,9 +44,9 @@
 }
 
 .about-stop-lossing-image-dark {
-  max-width: 800px;
+  width: 800px;
   height: 569px;
-  padding: 7px 13px 7px 12px;
+  padding: 0px;
   margin-bottom: 24px;
 }
 

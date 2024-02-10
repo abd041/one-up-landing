@@ -23,32 +23,7 @@ const ArticleCMS = () => {
   const contentRef = useRef(null);
 
   const headingRef = useRef(null);
-  const contentShow=useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          // Element is now visible
-          console.log('Heading revealed!');
-        }
-      },
-      {
-        threshold: 0.5, // Observe changes when 50% of the element is visible
-      }
-    );
-
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
-    }
-
-    return () => {
-      if (observer) {
-        observer.unobserve(headingRef.current);
-      }
-    };
-  }, []);
+  const contentShow = useRef(null);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -136,7 +111,7 @@ const ArticleCMS = () => {
             </ListGroup>
           </div>
         )}
-        <Row id="show-now" ref={contentShow}>
+        <Row>
           <Col className="mx-auto" lg={8}>
             <div className="aricle-cms-main-wrapper mx-auto">
               <div className="aricle-cms-main-heading">
@@ -203,7 +178,7 @@ const ArticleCMS = () => {
         <Container className="articles-page-first-container mx-sm-auto mx-0">
           <Row>
             <Col className="article-resousrce-first-wrapper">
-              <div className="article-investing-heading" id="hide-above" ref={headingRef}>
+              <div className="article-investing-heading">
                 <h1>Other Articles</h1>
               </div>
             </Col>

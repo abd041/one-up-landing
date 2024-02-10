@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { ListGroup } from "react-bootstrap";
 import { useTheme } from "../../ThemeContext";
 import "./ArticleCMS.css";
-import about_stop_lossing from "../../assets/dark/about/about-stop-lossing.png";
 import AbouPara from "../../components/About/AbouPara";
 import FAQs from "../../components/Faqs/FAQs";
 import { JoinNow } from "../../components/JoinNow/JoinNow";
@@ -15,12 +14,16 @@ import arrow_down from "../../assets/dark/articles/arrow-down.png";
 import ExpertTeam from "../about/ExpertTeam";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import art2 from "../../assets/dark/articles/art2.png";
 
 const ArticleCMS1 = () => {
   const { theme } = useTheme();
   const [headings, setHeadings] = useState([]);
   const [reachedLastHeading, setReachedLastHeading] = useState(true); // Initially set to true to hide the table of contents
   const contentRef = useRef(null);
+
+  const headingRef = useRef(null);
+  const contentShow = useRef(null);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -73,8 +76,7 @@ const ArticleCMS1 = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  return (
+ return (
     <div
       className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}
       ref={contentRef}
@@ -90,7 +92,7 @@ const ArticleCMS1 = () => {
               {headings.map((heading) => {
                 const firstThreeWords = heading.textContent
                   .split(" ")
-                  .slice(0, 5)
+                  .slice(0, 3)
                   .join(" ");
                 return (
                   <ListGroup.Item
@@ -117,14 +119,14 @@ const ArticleCMS1 = () => {
                 </h4>
                 <h4>Article</h4>
                 <p className="d-flex align-items-center">
-                  <span>&gt;</span>The Silent Threat: How Mutual Fund Fees Erode
-                  Your Wealth Over Time
+                  <span>&gt;</span>Unveiling a New Era in Investment: The
+                  Collective Intelligence Approach
                 </p>
               </div>
               <div className="aricle-cms-main-para">
                 <h4>
-                  The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over
-                  Time
+                  Unveiling a New Era in Investment: The Collective Intelligence
+                  Approach
                 </h4>
               </div>
               <div className="d-flex justify-content-between align-items-center date-in-article-main">
@@ -142,32 +144,38 @@ const ArticleCMS1 = () => {
         <Row>
           <Col className="d-flex justify-content-center mx-auto" lg={8}>
             <div className="about-stop-lossing-image-dark">
-              <img src={about_stop_lossing} alt="..." />
+              <img src={art2} alt="..." />
             </div>
           </Col>
         </Row>
         <ArticleHeading title="Introduction" />
-        <AbouPara title="Investing is about building wealth and financial security, yet there's a silent threat undermining this goal: mutual fund fees. Often hidden and complex, these fees chip away at your returns over time. Let's dive into how mutual fund fees work, their impact, and why OneUp's revolutionary subscription-based model is changing the game." />
+        <AbouPara title="Asset management is witnessing a revolution, one inspired by the ingenious insights of Ray Dalio and his advocacy for meritocracy and collective intelligence. This novel investment methodology leverages advanced technology and machine learning, echoing Dalio's principles, to redefine the asset management realm." />
         <ArticleHeading title="Demystifying Mutual Fund Fees" />
         <AbouPara title="Mutual funds come with a variety of charges, from management fees to shareholder expenses. To cut through the complexity, investors look at the expense ratio. However, these ratios, although small in percentage, can significantly erode your wealth over time." />
 
-        <ArticleHeading title="The High Cost of Small Numbers" />
-        <AbouPara title="Consider this: a 1.5% expense ratio might not sound like much, but over 30 years, it can cost you over $628,000 in potential earnings. This example drives home how even seemingly minor fees can have a major impact on your long-term financial health." />
+        <ArticleHeading title="Navigating Asset Management's Complex Landscape" />
+        <AbouPara title="Traditional asset management is riddled with challenges: underperformance, steep fees, and a glaring transparency gap. Investors are often caught in a dilemma, choosing between the steep learning curve of self-management or entrusting funds to managers whose fees don’t always translate into performance." />
 
-        <ArticleHeading title="OneUp vs. Traditional Investment Models" />
-        <AbouPara title="OneUp stands apart from passive ETFs and index funds. While these options track indices, they lack the adaptability and specificity of OneUp’s actively managed funds. Our model combines the benefits of active management with a low-cost structure, making it a smarter choice for long-term wealth accumulation." />
+        <ArticleHeading title="A Paradigm Shift Inspired by Collective Wisdom" />
+        <AbouPara title="Rooted in the concept of collective intelligence, this methodology mirrors Ray Dalio’s ethos: the power of unified intelligence. It’s about channeling the collective expertise of the investment world to drive unparalleled results." />
 
-        <ArticleHeading title="Shifting Away from Traditional Fee Structures" />
-        <AbouPara title="Traditionally, investment firms have relied on AUM fees, often at the cost of your growing assets. Enter OneUp: our subscription-based model replaces these escalating AUM fees with a fixed, transparent rate. It's active management made affordable, focusing on maximizing your returns, not our profits." />
+        <ArticleHeading title="AI-Driven Analysis" />
+        <AbouPara title="Employing advanced generative AI, this approach analyzes the investment landscape, scrutinizing institutional strategies to identify strengths and weaknesses. Recognizing that today’s top managers may not hold the title tomorrow, the system is designed to evolve, adapting to the dynamic financial markets." />
 
-        <ArticleHeading title="OneUp’s ZERO Fee Edge in Active Management" />
-        <AbouPara title="While traditional active management can offer higher returns, it often comes at a high cost. OneUp changes this equation. Using technology and AI, we provide strategic, active management opportunities at a fraction of the cost, outpacing traditional indices and ETFs." />
+        <ArticleHeading title="Performance-Based Ratings:" />
+        <AbouPara title="This system assesses industry players based on their track records, spotlighting those who consistently outperform the market. It tackles the challenge of identifying the best managers by tapping into the industry’s collective knowledge." />
 
-        <ArticleHeading title="Embracing a Fee-Free Future with OneUp" />
-        <AbouPara title="Say goodbye to the days of hefty active management fees. OneUp’s Netflix-like subscription model offers you the advantages of active management without the financial strain. It's a new era of investing where improved performance and compounded savings work together to grow your wealth." />
+        <ArticleHeading title="Dynamic Portfolio Management:" />
+        <AbouPara title="Harnessing this collective intelligence, the system autonomously curates portfolios, democratizing investment. It allows anyone to access the collective acumen of top investors, prioritizing investor welfare above all." />
+
+        <ArticleHeading title="Adaptive Learning:" />
+        <AbouPara title="Constantly integrating new insights, the methodology adapts to market changes. It’s a testament to the power of collective efforts in enhancing investment strategies." />
+
+        <ArticleHeading title="Placing Users at the Center" />
+        <AbouPara title="This approach revolutionizes investment by simplifying complex decision-making. It distills industry-wide expertise into an accessible, user-friendly format, empowering users with a formidable investment tool without needing deep financial knowledge." />
 
         <ArticleHeading title="Conclusion" />
-        <AbouPara title="Mutual fund fees, though often overlooked, have a tangible impact on your investments. By understanding and addressing these fees, you can make smarter choices for your financial future. OneUp’s innovative approach, merging tech-driven active management with a cost-effective subscription model, presents a compelling alternative. It’s time to step into a world where your investments work harder for you, free from the drag of traditional fees. Join OneUp and take control of your financial destiny." />
+        <AbouPara title="“This innovative methodology is a game-changer in asset management. Fusing Ray Dalio’s principles with modern AI, it opens investment decision-making to a wider audience. It addresses critical issues of underperformance and transparency, marking a new chapter in investment – efficient, inclusive, and focused on investor success. Inspired by collective intelligence, it heralds a promising future in asset management.”" />
       </Container>
       <div
         className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}

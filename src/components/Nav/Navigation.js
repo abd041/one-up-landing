@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTheme } from '../../ThemeContext'
 import "./Navigation.css";
 import logo from "../../assets/dark/Homepage/logo.png";
 import arrow from "../../assets/dark/arrow-down.png";
@@ -7,9 +8,13 @@ import bars from "../../assets/dark/mobile navigation/bars.png";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  
+  const { theme } = useTheme();
   const [showResource, setShowResource] = useState(false);
+  const [showResource1, setShowResource2] = useState(false);
   const [showNav, setShowNavbar] = useState(false);
   return (
+    <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
     <div className="navigation-main-wrapper">
       <div className="navigation-second-wrapper">
         <Link to="/">
@@ -25,11 +30,18 @@ const Navigation = () => {
           <Link to="/pricing">
             <h1 className="navigation-first-heading">Pricing</h1>
           </Link>
-          <h1
-            className="navigation-resources-heading"
-            onClick={() => setShowResource(!showResource)}
-          >
-            Resources <img src={arrow} />
+
+          <div className="navigation-resources-heading">
+            <h1
+              onClick={() => {
+                setShowResource(!showResource);
+                setShowResource2(false);
+              }}
+            >
+              {" "}
+              Resources <img src={arrow} />
+            </h1>
+
             <div
               className={
                 showResource ? "navigation-resource-wrapper" : "d-none"
@@ -39,30 +51,54 @@ const Navigation = () => {
                 to="/about"
                 className="d-flex justify-content-between header-about-heading"
               >
-                <h1>About Us</h1>
-                <img src={arrow} />
+                <h1
+                  onClick={() => {
+                    setShowResource(!showResource);
+                    setShowResource2(false);
+                  }}
+                >
+                  About Us
+                </h1>
+
               </Link>
               <Link
                 to="/articles"
                 className="d-flex justify-content-between header-about-heading"
               >
-                <h1>Articles</h1>
+                <h1
+                  onClick={() => {
+                    setShowResource(!showResource);
+                    setShowResource2(false);
+                  }}
+                >
+                  Articles
+                </h1>
+              </Link>
+              <div
+                className="d-flex justify-content-between header-about-heading"
+                onClick={() => {
+                  setShowResource2(!showResource1);
+                }}
+              >
+                <h1>Show arictle</h1>
                 <img src={arrow} />
-              </Link>
-              <Link to="/articlecms" className="header-desc-wrapper">
-                <h1>The Silent Threat</h1>
-              </Link>
-              <Link to="/articlecms1" className="header-desc-wrapper">
-                <h1>Unveiling a New Era in Investment</h1>
-              </Link>
-              <Link to="/articlecms2" className="header-desc-wrapper">
-                <h1>Active vs Passive Management</h1>
-              </Link>
-              <Link to="/articlecms3" className="header-desc-wrapper">
-                <h1>Empowering investors with full control</h1>
-              </Link>
+              </div>
+              <div style={{ display: showResource1 ? "block" : "none" }}>
+                <Link to="/articlecms" className="header-desc-wrapper">
+                  <h1>The Silent Threat</h1>
+                </Link>
+                <Link to="/articlecms1" className="header-desc-wrapper">
+                  <h1>Unveiling a New Era in Investment</h1>
+                </Link>
+                <Link to="/articlecms2" className="header-desc-wrapper">
+                  <h1>Active vs Passive Management</h1>
+                </Link>
+                <Link to="/articlecms3" className="header-desc-wrapper">
+                  <h1>Empowering investors with full control</h1>
+                </Link>
+              </div>
             </div>
-          </h1>
+          </div>
         </div>
         <div className="d-md-flex d-none">
           <div className="nav-toggle-theme">
@@ -92,24 +128,37 @@ const Navigation = () => {
           <Link to="/" className="navigation-first-heading-mobile">
             HOME
           </Link>
+          <Link to="/about" className="navigation-first-heading-mobile">
+            About
+          </Link>
           <Link to="/pricing" className="navigation-first-heading-mobile">
             PRICING
           </Link>
 
-          <h1 className="navigation-first-heading-mobile">RESOURCES</h1>
-          <Link to="/ArticleCMS" className="mobile-article-heading">
-            The Silent Threat
-          </Link>
-          <Link to="/ArticleCMS1" className="mobile-article-heading">
-            Unveiling a New Era in Investment
-          </Link>
+          <h1
+            className="navigation-first-heading-mobile"
+            onClick={() => {
+              setShowResource2(!showResource1);
+            }}
+          >
+            RESOURCES
+          </h1>
 
-          <Link to="/ArticleCMS2" className="mobile-article-heading">
-            Active vs Passive Management
-          </Link>
-          <Link to="/ArticleCMS3" className="mobile-article-heading">
-            Empowering investors with full control
-          </Link>
+          <div style={{ display: showResource1 ? "block" : "none" }}>
+            <Link to="/ArticleCMS" className="mobile-article-heading">
+              The Silent Threat
+            </Link>
+            <Link to="/ArticleCMS1" className="mobile-article-heading">
+              Unveiling a New Era in Investment
+            </Link>
+
+            <Link to="/ArticleCMS2" className="mobile-article-heading">
+              Active vs Passive Management
+            </Link>
+            <Link to="/ArticleCMS3" className="mobile-article-heading">
+              Empowering investors with full control
+            </Link>
+          </div>
 
           <div className="nav-toggle-theme">
             <ThemeToggle />
@@ -122,6 +171,7 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

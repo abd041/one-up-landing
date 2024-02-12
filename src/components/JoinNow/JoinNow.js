@@ -15,11 +15,14 @@ export const JoinNow = () => {
               </h3>
             </div>
             <div className="join-page-main-para">
-              {/* <p>Read the whole Ideation behind oneup’s within 5 min</p> */}
+              <p>
+                Unleash the full potential of your Investments with just one
+                click <img src={arrowRight} alt="..." />
+              </p>
             </div>
             <div className="join-now-btn-wrapper ">
               <button className="join-create-account-btn">
-                Unleash the full potential of your Investments with just one click <img src={arrowRight} alt="..." />
+                Create your Account Now <img src={arrowRight} alt="..." />
               </button>
             </div>
           </div>

@@ -71,7 +71,6 @@
   text-align: center;
   height: 63px;
   padding: 13px 24px;
-  /* Semibold/Type@18 */
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -91,11 +90,15 @@
 
 @media screen and (max-width: 992px) {
   .hero-lines-wrapper {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: -40%;
   }
 
   .hero-lines-wrapper-second {
-    display: none;
+    position: absolute;
+    top: 61%;
+    left: -70%;
   }
 }
 
@@ -105,5 +108,12 @@
   }
   .expert-team-hero-section {
     margin-top: 145px;
+  }
+  .hero-lines-wrapper {
+    display: none;
+  }
+
+  .hero-lines-wrapper-second {
+    display: none;
   }
 }

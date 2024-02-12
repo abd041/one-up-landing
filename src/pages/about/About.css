@@ -64,7 +64,7 @@
 .about-below-image-para > p {
   max-width: 800px;
   color: var(--body-txt, #b2b2b2);
-  text-align: justify;
+  text-align: left;
   font-family: Satoshi;
   font-size: 18px;
   font-style: normal;
@@ -104,6 +104,10 @@
     overflow: hidden !important;
     animation: moveRight 30s linear infinite;
     width: 100%;
+}
+
+.expert-team-images-wrape > div > img{
+min-height: 56px;
 }
 
 

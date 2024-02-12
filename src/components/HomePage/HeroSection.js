@@ -30,7 +30,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="hero-main-heading d-flex justify-content-center">
-                <h4>Stop loosing $100,000’s.</h4>
+                <h4>Stop loosing $100,000s.</h4>
               </div>
               <div className="hero-main-desc  d-flex justify-content-center">
                 <p>
@@ -58,7 +58,7 @@ const Hero = () => {
                 className="expert-team-images-wrape"
                 style={{ width: "100%" }}
               >
-                <div className="expert-team-first-image">
+                <div>
                   <img src={expert_one} alt="..." />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ const Hero = () => {
                 <div>
                   <img src={expert_four} alt="..." />
                 </div>
-                <div className="expert-team-image-five">
+                <div>
                   <img src={expert_five} alt="..." />
                 </div>
               </div>

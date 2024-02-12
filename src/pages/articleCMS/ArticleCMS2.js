@@ -27,6 +27,10 @@ const ArticleCMS2 = () => {
   const contentShow = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (contentRef.current) {
       const headings =
         contentRef.current.querySelectorAll('h3[id^="section-"]');

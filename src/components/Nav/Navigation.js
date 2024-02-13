@@ -101,16 +101,12 @@ const Navigation = () => {
                   }}
                 >
                   <h1
-                    onClick={() => {
-                      setShowResource(!showResource);
-                      setShowResource2(false);
-                    }}
                     style={{ color: theme === "dark" ? "#fff" : "#111928" }}
                   >
                     Articles
                   </h1>
                 </Link>
-                <div
+                {/* <div
                   className="d-flex justify-content-between header-about-heading"
                   style={{
                     borderColor: theme === "dark" ? "#1f2228" : "#E5E7EB",
@@ -153,7 +149,7 @@ const Navigation = () => {
                       Empowering investors with full control
                     </h1>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -194,15 +190,28 @@ const Navigation = () => {
             <Link to="/pricing" className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}>
               PRICING
             </Link>
+            <Link
+                  to="/articles"
+                  className="d-flex justify-content-between header-about-heading"
+                  style={{
+                    borderColor: theme === "dark" ? "#1f2228" : "#E5E7EB",
+                  }}
+                >
+                  <h1
+                    style={{ color: theme === "dark" ? "#fff" : "#111928" }}
+                  >
+                    Articles
+                  </h1>
+                </Link>
 
-            <h1
+            {/* <h1
               className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}
               onClick={() => {
                 setShowResource2(!showResource1);
               }}
             >
               RESOURCES
-            </h1>
+            </h1> */}
 
             <div style={{ display: showResource1 ? "block" : "none" }}>
               <Link to="/ArticleCMS" className={theme === "dark"? "mobile-article-heading":"mobile-article-heading-white"}>

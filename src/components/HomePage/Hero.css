@@ -2,6 +2,10 @@
   background: #121212;
 }
 
+.Homepage-Hero-warpper-dark-light {
+  background: linear-gradient(180deg, #f2f2f2 0%, #fff 73.29%);
+}
+
 .hero-main-heading {
   margin-bottom: 24px;
 }
@@ -14,6 +18,11 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: -2.16px;
+
+  margin-bottom: 0px;
+}
+
+.hero-main-heading-dark {
   background: radial-gradient(
     112.72% 109.28% at 64.84% 30.41%,
     #fff 0%,
@@ -22,7 +31,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0px;
+}
+.hero-main-heading-light {
+  background: var(--G1, linear-gradient(93deg, #252e54 0.38%, #4e6abf 60.59%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-main-desc {
@@ -30,7 +44,6 @@
 }
 
 .hero-main-desc > p {
-  color: #b7b7b7;
   text-align: center;
   font-family: Satoshi;
   font-size: 24px;
@@ -65,7 +78,7 @@
   left: -40%;
 }
 
-.hero-section-btn > button {
+.hero-invset-btn {
   width: 100%;
   color: var(--Primary-0, #fff);
   text-align: center;
@@ -80,6 +93,23 @@
   border-radius: 8px;
   border: 1px solid var(--Primary-0, #fff);
   background: transparent;
+}
+
+.hero-invset-btn-light {
+  width: 100%;
+  color: var(--Primary-0, #fff);
+  text-align: center;
+  height: 63px;
+  padding: 13px 24px;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #5573d1 0%, #1038b2 100%);
+  border: none;
 }
 
 .expert-team-hero-section {

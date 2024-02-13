@@ -12,6 +12,11 @@ import expert_five from "../../assets/dark/about/expert_five.png";
 import arrow from "../../assets/dark/Homepage/arrow-right.png";
 import Line1 from "../../assets/dark/Homepage/line.png";
 import Line2 from "../../assets/dark/Homepage/line1.png";
+import team1 from "../../assets/light/team1.png"
+import team2 from "../../assets/light/team2.png"
+import team3 from "../../assets/light/team3.png"
+import team4 from "../../assets/light/team4.png"
+import team5 from "../../assets/light/team5.png"
 const Hero = () => {
   const { theme } = useTheme();
   return (
@@ -19,7 +24,7 @@ const Hero = () => {
       className={
         theme === "dark"
           ? "Homepage-Hero-warpper-dark"
-          : "Homepage-Hero-warpper-dark"
+          : "Homepage-Hero-warpper-dark-light"
       }
     >
       <Container>
@@ -36,10 +41,18 @@ const Hero = () => {
                 </div>
               </div>
               <div className="hero-main-heading d-flex justify-content-center">
-                <h4>Stop loosing $100,000s.</h4>
+                <h4
+                  className={
+                    theme === "dark"
+                      ? "hero-main-heading-dark"
+                      : "hero-main-heading-light"
+                  }
+                >
+                  Stop loosing $100,000s.
+                </h4>
               </div>
               <div className="hero-main-desc  d-flex justify-content-center">
-                <p>
+                <p style={{ color: theme === "dark" ? "#b7b7b7" : "#4A537D" }}>
                   Choose Any Mutual Fund Strategy - We've Removed All
                   Fees. Plus, Tailor <br /> Your Investments to Match Your
                   Values, All in the Comfort and Control of Your Preferred
@@ -47,7 +60,13 @@ const Hero = () => {
                 </p>
               </div>
               <div className="hero-section-btn  mx-auto">
-                <button>
+                <button
+                  className={
+                    theme === "dark"
+                      ? "hero-invset-btn"
+                      : "hero-invset-btn-light"
+                  }
+                >
                   Invest with OneUp <img src={arrow} />
                 </button>
               </div>
@@ -65,19 +84,19 @@ const Hero = () => {
                 style={{ width: "100%" }}
               >
                 <div>
-                  <img src={expert_one} alt="..." />
+                  <img src={ theme === "dark" ? expert_one : team1} alt="..." />
                 </div>
                 <div>
-                  <img src={expert_two} alt="..." />
+                  <img src={theme === "dark" ? expert_two : team2} alt="..." />
                 </div>
                 <div>
-                  <img src={expert_three} alt="..." />
+                  <img src={theme === "dark" ? expert_three : team3} alt="..." />
                 </div>
                 <div>
-                  <img src={expert_four} alt="..." />
+                  <img src={theme === "dark" ? expert_four : team4} alt="..." />
                 </div>
                 <div>
-                  <img src={expert_five} alt="..." />
+                  <img src={theme === "dark" ? expert_five : team5} alt="..." />
                 </div>
               </div>
             </div>

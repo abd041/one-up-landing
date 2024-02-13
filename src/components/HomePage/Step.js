@@ -1,5 +1,6 @@
 import React from "react";
 import "./Step.css";
+import { useTheme } from "../../ThemeContext";
 import { Container, Row, Col } from "react-bootstrap";
 import C1 from "../../assets/dark/Homepage/c1.png";
 import one from "../../assets/dark/Homepage/one.png";
@@ -10,14 +11,27 @@ import connect from "../../assets/dark/Homepage/connect.png";
 import three from "../../assets/dark/Homepage/three.png";
 import c3 from "../../assets/dark/Homepage/c3.png";
 import th from "../../assets/dark/Homepage/th.png";
+import one_light from "../../assets/light/one-light.png";
+import c1light from "../../assets/light/c1light.png";
+import lightStar from "../../assets/light/lightstar.png";
+import twolight from "../../assets/light/twolight.png";
+import c2light from "../../assets/light/c2light.png";
+import connectlight from "../../assets/light/connectlight.png";
+import threelight from "../../assets/light/threelight.png";
+import c3light from "../../assets/light/c3light.png";
+import thlight from "../../assets/light/thlight.png";
+
 const Step = () => {
+  const { theme } = useTheme();
   return (
     <Container>
       <div className="step-main-wrapper">
         <Row>
           <Col className="d-flex d-lg-block justify-content-center">
             <div className="step-main-heading">
-              <h4>Get Started in 3 Simple Steps</h4>
+              <h4 style={{ color: theme === "dark" ? "#fff" : "#040815" }}>
+                Get Started in 3 Simple Steps
+              </h4>
             </div>
           </Col>
         </Row>
@@ -26,13 +40,15 @@ const Step = () => {
             <div>
               <div className="step-cards-wrapper">
                 <div className="step-card-one-heading">
-                  <img src={one} />
+                  <img src={theme === "dark" ? one : one_light} />
                 </div>
-                <img src={C1} alt="..." />
+                <img src={theme === "dark" ? C1 : c1light} alt="..." />
               </div>
               <div className="step-card-down-heading d-flex align-items-center">
-                <img src={star} alt="..." />
-                <h1>Select your strategy</h1>
+                <img src={theme === "dark" ? star : lightStar} alt="..." />
+                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                  Select your strategy
+                </h1>
               </div>
             </div>
           </Col>
@@ -40,13 +56,18 @@ const Step = () => {
             <div>
               <div className="step-cards-wrapper">
                 <div className="step-card-one-heading">
-                  <img src={two} />
+                  <img src={theme === "dark" ? two : twolight} />
                 </div>
-                <img src={C2} alt="..." />
+                <img src={theme === "dark" ? C2 : c2light} alt="..." />
               </div>
               <div className="step-card-down-heading d-flex align-items-center">
-                <img src={connect} alt="..." />
-                <h1>Connect your brokerage account</h1>
+                <img
+                  src={theme === "dark" ? connect : connectlight}
+                  alt="..."
+                />
+                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                  Connect your brokerage account
+                </h1>
               </div>
             </div>
           </Col>
@@ -54,13 +75,15 @@ const Step = () => {
             <div>
               <div className="step-cards-wrapper">
                 <div className="step-card-one-heading">
-                  <img src={three} />
+                  <img src={theme === "dark" ? three : threelight} />
                 </div>
-                <img src={c3} alt="..." />
+                <img src={theme === "dark" ? c3 : c3light} alt="..." />
               </div>
               <div className="step-card-down-heading d-flex align-items-center">
-                <img src={th} alt="..." />
-                <h1>Automatically track your favourite fund</h1>
+                <img src={theme === "dark" ? th : thlight} alt="..." />
+                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                  Automatically track your favourite fund
+                </h1>
               </div>
             </div>
           </Col>

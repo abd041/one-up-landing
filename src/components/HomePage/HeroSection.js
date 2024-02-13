@@ -15,7 +15,13 @@ import Line2 from "../../assets/dark/Homepage/line1.png";
 const Hero = () => {
   const { theme } = useTheme();
   return (
-    <div className={theme === "dark" ? "Homepage-Hero-warpper-dark" : ""}>
+    <div
+      className={
+        theme === "dark"
+          ? "Homepage-Hero-warpper-dark"
+          : "Homepage-Hero-warpper-dark"
+      }
+    >
       <Container>
         <Row>
           <Col>

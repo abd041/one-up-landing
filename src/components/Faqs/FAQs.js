@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
+import { useTheme } from "../../ThemeContext";
 import "./FAQs.css";
 import Minus from "../../assets/dark/faqs/minus.png";
 import add from "../../assets/dark/faqs/add.png";
@@ -7,6 +8,7 @@ import { Link } from "react-router-dom";
 import arrow_down from "../../assets/dark/faqs/arrow-down.png";
 
 const FAQs = () => {
+  const { theme } = useTheme();
   const [showFaq1, setShowFaqs1] = useState(true);
   const [showFaq2, setShowFaqs2] = useState(false);
   const [showFaq3, setShowFaqs3] = useState(false);
@@ -16,20 +18,34 @@ const FAQs = () => {
     <Row className="faqs-main-row-wrap">
       <Col lg={3} md={8} className="mx-md-auto mx-lg-0">
         <div className="faqs-main-heading">
-          <h4>Frequently Asked Questions</h4>
+          <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+            Frequently Asked Questions
+          </h4>
         </div>
       </Col>
       <Col lg={9} md={8} className="mx-md-auto mx-lg-0">
         <div
           className={
             showFaq1
-              ? "faqs-content-main-wrapper ms-auto"
+              ? `faqs-content-main-wrapper ms-auto ${
+                  theme === "dark"
+                    ? "faqs-content-main-wrapper-dark-border"
+                    : "faqs-content-main-wrapper-light-border"
+                }`
               : "faqs-content-main-wrapper-inactive ms-auto"
           }
         >
-          <div className="d-flex justify-content-between w-100 faqs-content-main-heading-main-wrapper">
+          <div
+            className={`d-flex justify-content-between w-100 ${
+              theme === "dark"
+                ? "faqs-content-main-heading-main-wrapper"
+                : "faqs-content-main-heading-main-wrapper-white"
+            } `}
+          >
             <div className="faqs-content-main-heading">
-              <h4>How do I get started?</h4>
+              <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                How do I get started?
+              </h4>
             </div>
             <div>
               <img
@@ -43,7 +59,7 @@ const FAQs = () => {
               showFaq1 ? "faqs-text-heading" : "faqs-text-heading-inactive"
             }
           >
-            <p>
+            <p style={{ color: theme === "dark" ? "#AAADB1" : "#596780" }}>
               Click Sign Up and create an account in under 60 seconds. Connect
               your existing brokerage account. You can invest now in an existing
               strategy or create your own.
@@ -53,13 +69,25 @@ const FAQs = () => {
         <div
           className={
             showFaq2
-              ? "faqs-content-main-wrapper ms-auto"
+              ? `faqs-content-main-wrapper ms-auto ${
+                  theme === "dark"
+                    ? "faqs-content-main-wrapper-dark-border"
+                    : "faqs-content-main-wrapper-light-border"
+                }`
               : "faqs-content-main-wrapper-inactive ms-auto"
           }
         >
-          <div className="d-flex justify-content-between w-100 faqs-content-main-heading-main-wrapper">
+          <div
+            className={`d-flex justify-content-between w-100 ${
+              theme === "dark"
+                ? "faqs-content-main-heading-main-wrapper"
+                : "faqs-content-main-heading-main-wrapper-white"
+            } `}
+          >
             <div className="faqs-content-main-heading">
-              <h4>What fees does OneUp charge?</h4>
+              <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                What fees does OneUp charge?
+              </h4>
             </div>
             <div>
               <img
@@ -73,7 +101,7 @@ const FAQs = () => {
               showFaq2 ? "faqs-text-heading" : "faqs-text-heading-inactive"
             }
           >
-            <p>
+            <p style={{ color: theme === "dark" ? "#AAADB1" : "#596780" }}>
               Click Sign Up and create an account in under 60 seconds. Connect
               your existing brokerage account. You can invest now in an existing
               strategy or create your own.
@@ -84,13 +112,25 @@ const FAQs = () => {
         <div
           className={
             showFaq3
-              ? "faqs-content-main-wrapper ms-auto"
+              ? `faqs-content-main-wrapper ms-auto ${
+                  theme === "dark"
+                    ? "faqs-content-main-wrapper-dark-border"
+                    : "faqs-content-main-wrapper-light-border"
+                }`
               : "faqs-content-main-wrapper-inactive ms-auto"
           }
         >
-          <div className="d-flex justify-content-between w-100 faqs-content-main-heading-main-wrapper">
+          <div
+            className={`d-flex justify-content-between w-100 ${
+              theme === "dark"
+                ? "faqs-content-main-heading-main-wrapper"
+                : "faqs-content-main-heading-main-wrapper-white"
+            } `}
+          >
             <div className="faqs-content-main-heading">
-              <h4>When will OneUp start making trades for me?</h4>
+              <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                When will OneUp start making trades for me?
+              </h4>
             </div>
             <div>
               <img
@@ -104,7 +144,7 @@ const FAQs = () => {
               showFaq3 ? "faqs-text-heading" : "faqs-text-heading-inactive"
             }
           >
-            <p>
+            <p style={{ color: theme === "dark" ? "#AAADB1" : "#596780" }}>
               Click Sign Up and create an account in under 60 seconds. Connect
               your existing brokerage account. You can invest now in an existing
               strategy or create your own.
@@ -115,13 +155,25 @@ const FAQs = () => {
         <div
           className={
             showFaq4
-              ? "faqs-content-main-wrapper ms-auto"
+              ? `faqs-content-main-wrapper ms-auto ${
+                  theme === "dark"
+                    ? "faqs-content-main-wrapper-dark-border"
+                    : "faqs-content-main-wrapper-light-border"
+                }`
               : "faqs-content-main-wrapper-inactive ms-auto"
           }
         >
-          <div className="d-flex justify-content-between w-100 faqs-content-main-heading-main-wrapper">
+          <div
+            className={`d-flex justify-content-between w-100 ${
+              theme === "dark"
+                ? "faqs-content-main-heading-main-wrapper"
+                : "faqs-content-main-heading-main-wrapper-white"
+            } `}
+          >
             <div className="faqs-content-main-heading">
-              <h4>Where does my money go after I invest with OneUp?</h4>
+              <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                Where does my money go after I invest with OneUp?
+              </h4>
             </div>
             <div>
               <img
@@ -135,7 +187,7 @@ const FAQs = () => {
               showFaq4 ? "faqs-text-heading" : "faqs-text-heading-inactive"
             }
           >
-            <p>
+            <p style={{ color: theme === "dark" ? "#AAADB1" : "#596780" }}>
               Click Sign Up and create an account in under 60 seconds. Connect
               your existing brokerage account. You can invest now in an existing
               strategy or create your own.
@@ -145,13 +197,25 @@ const FAQs = () => {
         <div
           className={
             showFaq5
-              ? "faqs-content-main-wrapper ms-auto"
+              ? `faqs-content-main-wrapper ms-auto ${
+                  theme === "dark"
+                    ? "faqs-content-main-wrapper-dark-border"
+                    : "faqs-content-main-wrapper-light-border"
+                }`
               : "faqs-content-main-wrapper-inactive ms-auto"
           }
         >
-          <div className="d-flex justify-content-between w-100 faqs-content-main-heading-main-wrapper">
+          <div
+            className={`d-flex justify-content-between w-100 ${
+              theme === "dark"
+                ? "faqs-content-main-heading-main-wrapper"
+                : "faqs-content-main-heading-main-wrapper-white"
+            } `}
+          >
             <div className="faqs-content-main-heading">
-              <h4>Can I track multiple strategies?</h4>
+              <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                Can I track multiple strategies?
+              </h4>
             </div>
             <div>
               <img
@@ -165,7 +229,7 @@ const FAQs = () => {
               showFaq5 ? "faqs-text-heading" : "faqs-text-heading-inactive"
             }
           >
-            <p>
+            <p style={{ color: theme === "dark" ? "#AAADB1" : "#596780" }}>
               Click Sign Up and create an account in under 60 seconds. Connect
               your existing brokerage account. You can invest now in an existing
               strategy or create your own.

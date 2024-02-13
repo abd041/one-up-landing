@@ -41,6 +41,22 @@
   margin-right: 24px;
 }
 
+.navigation-first-heading-white {
+  color:#596780;
+  text-align: justify;
+
+  /* Semibold/Type@16 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+  margin-right: 24px;
+}
+
+
+
 .navigation-second-heading {
   color: var(--body-txt, #b2b2b2);
   text-align: justify;
@@ -69,9 +85,38 @@
   margin-bottom: 0px;
   position: relative;
 }
+.navigation-resources-heading-white {
+  display: flex;
+  color:#596780;
+  text-align: justify;
+
+  /* Medium/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+  position: relative;
+}
 .navigation-resources-heading > h1 {
   display: flex;
   color: var(--Primary-0, #fff);
+  text-align: justify;
+
+  /* Medium/Type@16 */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.navigation-resources-heading-white > h1 {
+  display: flex;
+  color:#596780;
   text-align: justify;
 
   /* Medium/Type@16 */
@@ -88,21 +133,23 @@
   margin-left: 8px;
 }
 
+
+.navigation-resources-heading-white > img{
+  margin-left: 8px;
+}
 .navigation-resource-wrapper {
   min-width: 294px;
   position: absolute;
   top: 30px;
   left: 0;
-  background-color: #0d0d0d;
 }
 
 .header-about-heading {
   padding: 16px 8px;
-  border-bottom: 1px solid #1f2228;
+  border-bottom: 1px solid
 }
 .header-about-heading > h1 {
   margin-bottom: 0px;
-  color: var(--Primary-0, #fff);
   text-align: right;
 
   /* Semibold/Type@14 */
@@ -125,7 +172,6 @@
 }
 
 .header-desc-wrapper > h1 {
-  color: var(--Primary-0, #fff);
 
   /* Regular/Type@14 */
   font-family: Satoshi;
@@ -137,9 +183,9 @@
   margin-bottom: 0px;
 }
 
-.header-desc-wrapper:hover {
+/* .header-desc-wrapper:hover {
   background: #212121;
-}
+} */
 
 .nav-sign-up > button {
   border-radius: 8px;
@@ -152,6 +198,30 @@
   gap: 10px;
   align-self: stretch;
   color: var(--Primary-0, #fff);
+  text-align: center;
+
+  /* Semibold/Type@12 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 19.2px */
+  letter-spacing: -0.24px;
+  padding: 9px 16px;
+  height: 38px;
+}
+
+.nav-sign-up-white > button {
+  border-radius: 8px;
+  border: 1px solid var(--Secondary-200, #C3D4E9);
+  background: var(--Primary-0, #FFF);
+  display: flex;
+  padding: 5px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--Secondary-400, #363F5E);
   text-align: center;
 
   /* Semibold/Type@12 */
@@ -227,7 +297,6 @@
     top: 80px;
     left: 0px; /* Adjust as needed */
     width: 100vw; /* Adjust as needed */
-    background-color: #000;
     height: 100vh;
   }
 
@@ -253,6 +322,28 @@
     border-bottom: 1px solid #1f2228;
   }
 
+  .navigation-first-heading-mobile-white {
+    display: flex;
+    padding: var(--4, 16px) 8px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #596780;
+    text-align: right;
+
+    /* Semibold/Type@18 */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    background: var(--black, #fff);
+    border-bottom: 1px solid #E5E7EB;
+  }
+
   .mobile-article-heading {
     border-bottom: 1px solid #1f2228;
     display: flex;
@@ -273,9 +364,30 @@
     text-transform: capitalize;
   }
 
+  .mobile-article-heading-white {
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    padding: 12px 24px;
+    gap: var(--0, 0px);
+    flex: 1 0 0;
+    align-self: stretch;
+
+    flex-direction: column;
+    flex: 1 0 0;
+    color: #596780;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    text-transform: capitalize;
+  }
+
   .nav-toggle-theme {
     display: flex;
     justify-content: center;
+    margin-top: 12px;
   }
 
   .mobile-view {
@@ -294,10 +406,17 @@
   .navigation-second-wrapper {
     padding: 12px 12px;
   }
+
+  .navigation-second-wrapper-white {
+    padding: 12px 12px;
+  }
   .nav-toggle-theme {
     margin-bottom: 16px;
   }
   .nav-sign-up > button {
+    margin-bottom: 16px;
+  }
+  .nav-sign-up-white > button {
     margin-bottom: 16px;
   }
 }

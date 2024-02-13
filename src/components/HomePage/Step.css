@@ -10,7 +10,6 @@
 }
 
 .step-main-heading > h4 {
-  color: var(--Primary-0, #fff);
   font-family: Satoshi;
   font-size: 40px;
   font-style: normal;
@@ -41,7 +40,7 @@
 }
 
 .step-card-down-heading > h1 {
-  color: #fff;
+
 
   /* Bold/Type@18 */
   font-family: Satoshi;

@@ -10,9 +10,7 @@
   }
   
   .footer-heading > h1 {
-    color: var(--Primary-0, #FFF);
     text-align: justify;
-    /* Semibold/Type@20 */
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -22,8 +20,7 @@
     margin-bottom: 32px;
   }
   
-  .footer-desc > h2 {
-    color: var(--body-txt, #B2B2B2);
+  .footer-desc > h2 {  
     text-align: justify;
     /* Medium/Type@16 */
     font-family: Satoshi;

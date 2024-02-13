@@ -8,7 +8,7 @@ import bars from "../../assets/dark/mobile navigation/bars.png";
 import { Link } from "react-router-dom";
 import LogoLight from "../../assets/light/logo-light.png";
 import arrowdown from "../../assets/light/arrow-down.png";
-import lightbar from "../../assets/light/lightbar.png"
+import lightbar from "../../assets/light/lightbar.png";
 
 const Navigation = () => {
   const { theme } = useTheme();
@@ -88,7 +88,7 @@ const Navigation = () => {
                       setShowResource(!showResource);
                       setShowResource2(false);
                     }}
-                    style={{ color: theme === "dark" ? "#fff" : "#111928" }}
+                    style={{ color: theme === "dark" ? "#fff" : "#596780" }}
                   >
                     About Us
                   </h1>
@@ -100,9 +100,7 @@ const Navigation = () => {
                     borderColor: theme === "dark" ? "#1f2228" : "#E5E7EB",
                   }}
                 >
-                  <h1
-                    style={{ color: theme === "dark" ? "#fff" : "#111928" }}
-                  >
+                  <h1 style={{ color: theme === "dark" ? "#fff" : "#596780" }}>
                     Articles
                   </h1>
                 </Link>
@@ -179,30 +177,48 @@ const Navigation = () => {
             className={
               showNav ? "mobile-nav-position" : "mobile-nav-position-not"
             }
-            style={{background: theme === "dark" ? "#000" : "#fff"}}
+            style={{ background: theme === "dark" ? "#000" : "#fff" }}
           >
-            <Link to="/" className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}>
+            <Link
+              to="/"
+              className={
+                theme === "dark"
+                  ? "navigation-first-heading-mobile"
+                  : "navigation-first-heading-mobile-white"
+              }
+            >
               HOME
             </Link>
-            <Link to="/about" className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}>
-              About
-            </Link>
-            <Link to="/pricing" className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}>
-              PRICING
+            <Link
+              to="/about"
+              className={
+                theme === "dark"
+                  ? "navigation-first-heading-mobile"
+                  : "navigation-first-heading-mobile-white"
+              }
+            >
+              About Us
             </Link>
             <Link
-                  to="/articles"
-                  className="d-flex justify-content-between header-about-heading"
-                  style={{
-                    borderColor: theme === "dark" ? "#1f2228" : "#E5E7EB",
-                  }}
-                >
-                  <h1
-                    style={{ color: theme === "dark" ? "#fff" : "#111928" }}
-                  >
-                    Articles
-                  </h1>
-                </Link>
+              to="/pricing"
+              className={
+                theme === "dark"
+                  ? "navigation-first-heading-mobile"
+                  : "navigation-first-heading-mobile-white"
+              }
+            >
+              Pricing
+            </Link>
+            <Link
+              to="/articles"
+              className={
+                theme === "dark"
+                  ? "navigation-first-heading-mobile"
+                  : "navigation-first-heading-mobile-white"
+              }
+            >
+              Articles
+            </Link>
 
             {/* <h1
               className={theme === "dark"? "navigation-first-heading-mobile" : "navigation-first-heading-mobile-white"}
@@ -214,17 +230,45 @@ const Navigation = () => {
             </h1> */}
 
             <div style={{ display: showResource1 ? "block" : "none" }}>
-              <Link to="/ArticleCMS" className={theme === "dark"? "mobile-article-heading":"mobile-article-heading-white"}>
+              <Link
+                to="/ArticleCMS"
+                className={
+                  theme === "dark"
+                    ? "mobile-article-heading"
+                    : "mobile-article-heading-white"
+                }
+              >
                 The Silent Threat
               </Link>
-              <Link to="/ArticleCMS1" className={theme === "dark"? "mobile-article-heading":"mobile-article-heading-white"}>
+              <Link
+                to="/ArticleCMS1"
+                className={
+                  theme === "dark"
+                    ? "mobile-article-heading"
+                    : "mobile-article-heading-white"
+                }
+              >
                 Unveiling a New Era in Investment
               </Link>
 
-              <Link to="/ArticleCMS2" className={theme === "dark"? "mobile-article-heading":"mobile-article-heading-white"}>
+              <Link
+                to="/ArticleCMS2"
+                className={
+                  theme === "dark"
+                    ? "mobile-article-heading"
+                    : "mobile-article-heading-white"
+                }
+              >
                 Active vs Passive Management
               </Link>
-              <Link to="/ArticleCMS3" className={theme === "dark"? "mobile-article-heading":"mobile-article-heading-white"}>
+              <Link
+                to="/ArticleCMS3"
+                className={
+                  theme === "dark"
+                    ? "mobile-article-heading"
+                    : "mobile-article-heading-white"
+                }
+              >
                 Empowering investors with full control
               </Link>
             </div>

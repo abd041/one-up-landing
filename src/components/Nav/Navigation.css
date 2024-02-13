@@ -76,13 +76,14 @@
   color: var(--Primary-0, #fff);
   text-align: justify;
 
-  /* Medium/Type@16 */
-  font-family: Satoshi;
+  /* Semibold/Type@16 */
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.32px;
   margin-bottom: 0px;
+  margin-right: 24px;
   position: relative;
 }
 .navigation-resources-heading-white {
@@ -91,12 +92,13 @@
   text-align: justify;
 
   /* Medium/Type@16 */
-  font-family: Satoshi;
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.32px;
   margin-bottom: 0px;
+  margin-right: 24px;
   position: relative;
 }
 .navigation-resources-heading > h1 {
@@ -105,12 +107,13 @@
   text-align: justify;
 
   /* Medium/Type@16 */
-  font-family: Satoshi;
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.32px;
   margin-bottom: 0px;
+  margin-right: 24px;
   position: relative;
 }
 
@@ -119,11 +122,11 @@
   color:#596780;
   text-align: justify;
 
-  /* Medium/Type@16 */
-  font-family: Satoshi;
+  /* Semibold/Type@16 */
+  font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.32px;
   margin-bottom: 0px;
   position: relative;
@@ -154,12 +157,13 @@
 
   /* Semibold/Type@14 */
   font-family: Inter;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.28px;
+  letter-spacing: -0.32px;
   margin-bottom: 0px;
+  margin-right: 24px;
+  position: relative;
 }
 
 .header-desc-wrapper {

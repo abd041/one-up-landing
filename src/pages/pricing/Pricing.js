@@ -13,7 +13,7 @@ import { JoinNow } from "../../components/JoinNow/JoinNow";
 import Footer from "../../components/Footer/Footer";
 const Pricing = () => {
   const { theme } = useTheme();
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(false);
   return (
     <div className={theme === "dark" ? "pricing-page-main-wrapper-dark" : ""}>
       <Navigation />
@@ -69,7 +69,7 @@ const Pricing = () => {
               </div>
               <div className="pricing-main-value">
                 <h1>
-                  $0 <span>/month</span>
+                  $0 <span>/{!checked ? "month" : "year"}</span>
                 </h1>
               </div>
               <div className="princing-description">
@@ -129,7 +129,7 @@ const Pricing = () => {
               </div>
               <div className="pricing-main-value">
                 <h1>
-                  $25 <span>/month</span>
+                  {!checked ? "$25" : "$20"} <span>/{!checked ? "month" : "year"}</span>
                 </h1>
               </div>
               <div className="princing-description">
@@ -211,7 +211,7 @@ const Pricing = () => {
               </div>
               <div className="pricing-main-value">
                 <h1>
-                  $40 <span>/month</span>
+                {!checked ? "$40" : "$32"} <span>/{!checked ? "month" : "year"}</span>
                 </h1>
               </div>
               <div className="princing-description">

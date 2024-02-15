@@ -16,9 +16,9 @@ const Benefit = () => {
   const { theme } = useTheme();
   return (
     <div>
-      <div className="benefit-main-wrapper">
+      <div className="">
         <Container>
-          <Row>
+          <Row className="benefit-main-wrapper-first">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -68,9 +68,9 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className="benefit-main-wrapper">
+      <div>
         <Container>
-          <Row>
+          <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -120,9 +120,9 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className="benefit-main-wrapper">
+      <div>
         <Container>
-          <Row>
+          <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -172,9 +172,9 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className="benefit-main-wrapper">
+      <div>
         <Container>
-          <Row>
+          <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div

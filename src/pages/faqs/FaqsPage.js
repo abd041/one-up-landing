@@ -1,15 +1,19 @@
-import React, { useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import React, { useState , useEffect} from "react";
+import { Row, Col, Container } from "react-bootstrap";
 import { useTheme } from "../../ThemeContext";
-import "./FAQs.css";
 import Minus from "../../assets/dark/faqs/minus.png";
 import add from "../../assets/dark/faqs/add.png";
 import { Link } from "react-router-dom";
 import arrow_down from "../../assets/dark/faqs/arrow-down.png";
+import Navigation from "../../components/Nav/Navigation";
 
-const FAQs = () => {
+const FaqsPage = () => {
   const { theme } = useTheme();
   const [showFaq1, setShowFaqs1] = useState(4);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const data = [
     {
@@ -42,19 +46,54 @@ const FAQs = () => {
       q1: "How does OneUp adjust my strategy if new positions are added by the portfolio manager?",
       a1: "Our system ensures your portfolio aligns with your chosen strategy by automatically adjusting holdings based on the portfolio manager's actions. If new positions are acquired, we proportionally rebalance your portfolio to maintain strategy alignment.",
     },
-  
+    {
+      id: 10,
+      q1: "How secure is the integration between OneUp and my brokerage?",
+      a1: "We prioritize your security by employing bank-level safeguards for all data. Integration occurs through a proxy authentication system, similar to Plaid, allowing us to securely manage your account without direct access to your login credentials. Access can be revoked anytime through your brokerage settings.",
+    },
+    {
+      id: 11,
+      q1: "Does OneUp engage in short selling or crypto trading?",
+      a1: "OneUp strictly avoids short selling and does not engage in cryptocurrency or options trading, focusing instead on stocks within the parameters of your chosen strategies.",
+    },
+    {
+      id: 12,
+      q1: "How are trades executed in my brokerage account?",
+      a1: "We utilize your brokerage's API, leveraging authentication tokens (without accessing your login details) to execute trades according to your strategy preferences. This ensures seamless and secure transaction management.",
+    },
+    {
+      id: 13,
+      q1: "Will OneUp trade on margin?",
+      a1: "We do not conduct margin trading, regardless of whether your brokerage account permits it. Our commitment is to ensure a responsible and secure investment approach.",
+    },
+    {
+      id: 14,
+      q1: "Does OneUp reinvest my earnings?",
+      a1: "Yes, earnings are automatically reinvested to maintain and enhance your strategy's alignment, leveraging both your initial allocation and accrued profits for portfolio rebalancing.",
+    },
+    {
+      id: 15,
+      q1: "Will OneUp affect other stocks in my account?",
+      a1: "OneUp operates with precision, managing only the shares acquired through our platform. Your existing holdings, even those with matching tickers, remain untouched and under your control.",
+    },
   ];
+  
   return (
-    <Row className="faqs-main-row-wrap">
-      <Col lg={3} md={8} className="mx-md-auto mx-lg-0">
-        <div className="faqs-main-heading">
-          <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
-            Frequently Asked Questions
-          </h4>
-        </div>
-      </Col>
-      <Col lg={9} md={8} className="mx-md-auto mx-lg-0">
-      {data.map((da) => {
+    <div>
+      <Navigation />
+      <Container>
+        <Row>
+          <Col lg={9} md={8} className="mx-auto">
+            <div className="faqs-main-heading faqs-page-headin">
+              <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                Frequently Asked Questions
+              </h4>
+            </div>
+          </Col>
+        </Row>
+        <Row className="faqs-main-row-wrap-page">
+          <Col lg={9} md={8} className="mx-auto">
+            {data.map((da) => {
               return (
                 <div
                   className={
@@ -110,19 +149,11 @@ const FAQs = () => {
                 </div>
               );
             })}
-        <div className={"faqs-content-main-wrapper-inactive ms-auto"}>
-          <div className="faqs-main-links">
-            <Link to="/faq">
-              SEE ALL FAQ’s
-              <span>
-                <img src={arrow_down} />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </Col>
-    </Row>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
-export default FAQs;
+export default FaqsPage;

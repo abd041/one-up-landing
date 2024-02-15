@@ -206,6 +206,98 @@ This change promises to amplify the benefits and wealth-building potential for t
 Join OneUp and experience the renaissance of active management. Say goodbye to traditional fees and hello to a brighter financial future."
         />
       </Container>
+      <Container className="articles-page-first-container mx-sm-auto mx-0">
+        <Row>
+          <Col className="article-resousrce-first-wrapper">
+            <div className="article-investing-heading">
+              <h1>Other Articles</h1>
+            </div>
+          </Col>
+        </Row>
+        <Row className="article-card-first-row">
+          <Col lg={6}>
+            <Link to="/ArticleCMS2">
+              <div className="articles-card-main-wrapper">
+                <div className="articles-card-main-heading">
+                  <h3>
+                    Active vs Passive Management: balancing fees for investor
+                    benefit
+                  </h3>
+                </div>
+                <div className="articles-card-main-para">
+                  <p>
+                    In the investment realm, the active versus passive
+                    management debate is age-old. Passive management, with its
+                    straightforward, cost-effective approach, mirrors market
+                    returns. Active management, on the other hand, strives to
+                    outperform the market, often at a higher fee.
+                  </p>
+                </div>
+                <div className="d-flex justify-content-end">
+                  <button className="articles-card-main-btn">
+                    <img src={arrow_down} alt="..." />
+                  </button>
+                </div>
+              </div>
+            </Link>
+          </Col>
+
+          <Col lg={6}>
+            <Link to="/ArticleCMS1">
+              <div className="articles-card-main-wrapper">
+                <div className="articles-card-main-heading">
+                  <h3>
+                    Unveiling a New Era in Investment: The Collective
+                    Intelligence Approach
+                  </h3>
+                </div>
+                <div className="articles-card-main-para">
+                  <p>
+                    Asset management is witnessing a revolution, one inspired by
+                    the ingenious insights of Ray Dalio and his advocacy for
+                    meritocracy and collective intelligence. This novel
+                    investment methodology leverages advanced technology and
+                    machine learning, echoing Dalio's principles, to redefine
+                    the asset management realm.
+                  </p>
+                </div>
+                <div className="d-flex justify-content-end">
+                  <button className="articles-card-main-btn">
+                    <img src={arrow_down} alt="..." />
+                  </button>
+                </div>
+              </div>
+            </Link>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={6}>
+            <Link to="/ArticleCMS3">
+              <div className="articles-card-main-wrapper">
+                <div className="articles-card-main-heading">
+                  <h3>
+                    Empowering investors with full control: the OneUp commitment
+                  </h3>
+                </div>
+                <div className="articles-card-main-para">
+                  <p>
+                    In the fast-paced world of personal finance, being in charge
+                    and clearly understanding your investments is critical.
+                    OneUp is here to make that happen. Our platform transforms
+                    your investment experience, offering real transparency and
+                    putting you firmly in control.
+                  </p>
+                </div>
+                <div className="d-flex justify-content-end">
+                  <button className="articles-card-main-btn">
+                    <img src={arrow_down} alt="..." />
+                  </button>
+                </div>
+              </div>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
       <div className="expert-team-wrapper-articles">
         <Container className="mx-sm-auto mx-0">
           <ExpertTeam />

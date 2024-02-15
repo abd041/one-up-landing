@@ -1,14 +1,15 @@
 import React from "react";
 import "./Footer.css";
-import Logo from "../../assets/dark/Homepage/logo.png";
 import { useTheme } from "../../ThemeContext";
 import LogoLight from "../../assets/light/logo-light.png";
+import logo from "../../assets/dark/Homepage/logo.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const { theme } = useTheme();
   return (
     <div className="footer-main-wrapper">
       <div className="footer-b-1">
-        <img src={theme === "dark" ? Logo : LogoLight} />
+        <img src={theme === "dark" ? logo : LogoLight} />
       </div>
       <div className="footer-b-2">
         <div className="footer-heading">
@@ -71,9 +72,9 @@ const Footer = () => {
           </h2>
         </div>
         <div className="footer-desc">
-          <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
+          <Link to="/faq" style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
             FAQ
-          </h2>
+          </Link>
         </div>
       </div>
       <div className="footer-b-5">

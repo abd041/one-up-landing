@@ -25,13 +25,13 @@ const Navigation = () => {
               : "navigation-second-wrapper-white"
           }
         >
-          <Link to="/">
+          <Link to="/" className="nav-first d-md-flex justify-content-start">
             <div className="navigation-main-logo">
               <img src={theme === "dark" ? logo : LogoLight} alt="..." />
             </div>
           </Link>
 
-          <div className="d-md-flex d-none">
+          <div className="d-md-flex d-none justify-content-center nav-second">
             <Link to="/">
               <h1
                 className={
@@ -151,7 +151,7 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          <div className="d-md-flex d-none">
+          <div className="d-md-flex d-none justify-content-end nav-three">
             <div className="nav-toggle-theme">
               <ThemeToggle />
             </div>

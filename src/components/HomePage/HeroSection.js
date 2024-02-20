@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
           </Col>
         </Row>
-        <Row className="expert-team-hero-section">
+        <Row className="expert-team-hero-section" >
           <Col lg={9} className="mx-auto" style={{ width: "100%" }}>
             <div style={{ width: "100%" }}>
               <div className="expert-team-haeding text-center">

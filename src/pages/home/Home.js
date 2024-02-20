@@ -20,7 +20,10 @@ const Home = () => {
       <Step />
       <Benefit />
       <Strategy />
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
       <Container><FAQs /></Container>
+      </div>
+    
       <JoinNow />
 
       <Footer />

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="styleguide.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="frame">
+            <img class="line" src="img/line-33.svg" />
+            <div class="div">
+                <div class="div-2">
+                    <div class="div-3">
+                        <div class="text-wrapper">Enjoy 0% fees</div>
+                        <p class="p">No more performance, management or hidden fees that erode your wealth</p>
+                    </div>
+                    <button class="button">
+                        <div class="label">Start Saving Now</div>
+                        <img class="arrow-right" src="img/arrow-right.svg" />
+                    </button>
+                </div>
+                <div class="group">
+                    <div class="money-send-wrapper"><img class="money-send" src="img/money-send.svg" /></div>
+                </div>
+            </div>
+            <img class="img" src="img/line-34.svg" />
+        </div>
+    </body>
+</html>
+
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    align-items: center;
+    gap: 180px;
+    position: relative;
+}
+
+.frame .line {
+    margin-top: -1px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.frame .div {
+    display: flex;
+    max-width: 1280px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.frame .div-2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 366px;
+    align-items: flex-start;
+    gap: 39px;
+    position: relative;
+}
+
+.frame .div-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: "Satoshi-Bold", Helvetica;
+    font-weight: 700;
+    color: var(--primary-900);
+    font-size: 32px;
+    letter-spacing: -0.96px;
+    line-height: 35.2px;
+}
+
+.frame .p {
+    position: relative;
+    align-self: stretch;
+    font-family: var(--medium-type-16-font-family);
+    font-weight: var(--medium-type-16-font-weight);
+    color: var(--secondary-400);
+    font-size: var(--medium-type-16-font-size);
+    letter-spacing: var(--medium-type-16-letter-spacing);
+    line-height: var(--medium-type-16-line-height);
+    font-style: var(--medium-type-16-font-style);
+}
+
+.frame .button {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 24px;
+    position: relative;
+    background-color: #4e6abf;
+    border-radius: 8px;
+}
+
+.frame .label {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--semibold-type-16-font-family);
+    font-weight: var(--semibold-type-16-font-weight);
+    color: var(--primary-0);
+    font-size: var(--semibold-type-16-font-size);
+    text-align: center;
+    letter-spacing: var(--semibold-type-16-letter-spacing);
+    line-height: var(--semibold-type-16-line-height);
+    white-space: nowrap;
+    font-style: var(--semibold-type-16-font-style);
+}
+
+.frame .arrow-right {
+    position: relative;
+    width: 12px;
+    height: 12px;
+}
+
+.frame .group {
+    position: relative;
+    width: 231.01px;
+    height: 231.01px;
+}
+
+.frame .money-send-wrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 23.96px;
+    padding: 57.51px;
+    position: relative;
+    border-radius: 60px;
+    border: 4px solid;
+    border-color: transparent;
+    border-image: linear-gradient(to bottom, rgb(209.4, 218.14, 233.75), rgba(89, 103, 128, 0)) 1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgb(242.25, 245.44, 255) 100%);
+}
+
+.frame .money-send {
+    position: relative;
+    width: 116px;
+    height: 116px;
+}
+
+.frame .img {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}

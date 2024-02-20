@@ -35,7 +35,7 @@
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
-  background: #fff;
+  background: transparent;
   position: relative;
 }
 

@@ -16,7 +16,7 @@ const Benefit = () => {
   const { theme } = useTheme();
   return (
     <div>
-      <div className="">
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
           <Row className="benefit-main-wrapper-first">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -68,7 +68,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
           <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -120,7 +120,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
           <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -172,7 +172,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
           <Row className="benefit-main-wrapper">
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">

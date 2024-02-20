@@ -24,7 +24,8 @@ import thlight from "../../assets/light/thlight.png";
 const Step = () => {
   const { theme } = useTheme();
   return (
-    <Container>
+    <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+         <Container>
       <div className="step-main-wrapper">
         <Row>
           <Col className="d-flex d-lg-block justify-content-center">
@@ -90,6 +91,8 @@ const Step = () => {
         </Row>
       </div>
     </Container>
+    </div>
+ 
   );
 };
 

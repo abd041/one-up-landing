@@ -2,9 +2,9 @@
   background: #121212;
 }
 
-.Homepage-Hero-warpper-dark-light {
-  background: linear-gradient(180deg, #f2f2f2 0%, #fff 73.29%);
-}
+/* .Homepage-Hero-warpper-dark-light {
+  background: transparent
+} */
 
 .hero-main-heading {
   margin-bottom: 24px;

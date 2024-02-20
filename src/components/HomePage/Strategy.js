@@ -9,7 +9,8 @@ import star_white from "../../assets/light/star_white.png"
 const Strategy = () => {
   const { theme } = useTheme();
   return (
-    <div className="strategy-main-wrapper">
+    <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+          <div className="strategy-main-wrapper">
       <Container>
         <Row>
           <Col className="d-md-block d-flex justify-content-center">
@@ -111,6 +112,8 @@ const Strategy = () => {
         </Row>
       </Container>
     </div>
+    </div>
+
   );
 };
 

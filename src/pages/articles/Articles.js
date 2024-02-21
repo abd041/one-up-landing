@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Articles.css";
 import { useTheme } from "../../ThemeContext";
 import { Container, Row, Col } from "react-bootstrap";
@@ -13,6 +13,9 @@ import nextLight from "../../assets/light/nextlight.png";
 
 const Articles = () => {
   const { theme } = useTheme();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}>
       <Navigation />
@@ -228,9 +231,12 @@ const Articles = () => {
           <ExpertTeam />
         </Container>
       </div>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+     
       <Container className="mx-sm-auto mx-0">
         <FAQs />
       </Container>
+      </div>
       <JoinNow />
       <Footer />
     </div>

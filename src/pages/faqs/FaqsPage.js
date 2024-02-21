@@ -6,6 +6,7 @@ import add from "../../assets/dark/faqs/add.png";
 import { Link } from "react-router-dom";
 import arrow_down from "../../assets/dark/faqs/arrow-down.png";
 import Navigation from "../../components/Nav/Navigation";
+import Footer from "../../components/Footer/Footer";
 
 const FaqsPage = () => {
   const { theme } = useTheme();
@@ -123,6 +124,9 @@ const FaqsPage = () => {
                     <div>
                       <img
                         src={da.id === showFaq1 ? Minus : add}
+                        style={{width :"24px" , height:"24px",
+                        filter: "invert(38%) sepia(71%) saturate(506%) hue-rotate(188deg) brightness(90%) contrast(86%)"
+                      }}
                         onClick={() => {
                           if (da.id == showFaq1) {
                             setShowFaqs1(0);
@@ -152,6 +156,7 @@ const FaqsPage = () => {
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </div>
   );
 };

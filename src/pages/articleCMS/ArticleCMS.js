@@ -16,6 +16,9 @@ import ExpertTeam from "../about/ExpertTeam";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import updated from "../../assets/dark/about/updated.png";
+import fblight from "../../assets/light/fb_light.png";
+import instalight from "../../assets/light/insta_light.png";
+import nextLight from "../../assets/light/nextlight.png";
 
 const ArticleCMS = () => {
   const { theme } = useTheme();
@@ -92,13 +95,15 @@ const ArticleCMS = () => {
         {!reachedLastHeading && (
           <div className="toc-container">
             <div className="list-table-of-content">
-              <h4>TABLE OF CONTENT</h4>
+              <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                TABLE OF CONTENT
+              </h4>
             </div>
             <ListGroup as="ul">
               {headings.map((heading) => {
                 const firstThreeWords = heading.textContent
                   .split(" ")
-                  .slice(0, 5)
+                  .slice(0, 2)
                   .join(" ");
                 return (
                   <ListGroup.Item
@@ -107,7 +112,11 @@ const ArticleCMS = () => {
                     id={`toc-${heading.id}`}
                     action
                     onClick={() => handleClick(heading.id)}
-                    className="list-main-items-article"
+                    className={
+                      theme === "dark"
+                        ? "list-main-items-article"
+                        : "list-main-items-article-light"
+                    }
                   >
                     {`${firstThreeWords}`}
                   </ListGroup.Item>
@@ -120,28 +129,36 @@ const ArticleCMS = () => {
           <Col className="mx-auto" lg={8}>
             <div className="aricle-cms-main-wrapper mx-auto">
               <div className="aricle-cms-main-heading">
-                <h4 className="d-flex align-items-center">
-                  Resources <span>&gt;</span>
+                <h4 className="d-flex align-items-center" style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                  Resources <span style={{ color: theme === "dark" ? "#fff" : "#11172A" }} >&gt;</span>
                 </h4>
-                <h4>Article</h4>
-                <p className="d-flex align-items-center">
-                  <span>&gt;</span>The Silent Threat: How Mutual Fund Fees Erode
+                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>Article</h4>
+                <p className="d-flex align-items-center"
+                  style={{ color: theme === "dark" ? "#B2B2B2" : "#90A3BF" }}
+               
+                >
+                  <span     style={{ color: theme === "dark" ? "#fff" : "#90A3BF" }}
+                >&gt;</span>The Silent Threat: How Mutual Fund Fees Erode
                   Your Wealth Over Time
                 </p>
               </div>
               <div className="aricle-cms-main-para">
-                <h4>
+                <h4  style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
                   The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over
                   Time
                 </h4>
               </div>
               <div className="d-flex justify-content-between align-items-center date-in-article-main">
                 <div className="date-in-article">
-                  <p>Feb 1, 2024 . 6 min read</p>
+                  <p    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}
+                 >Feb 1, 2024 . 6 min read</p>
                 </div>
                 <div>
-                  <img src={fb} className="date-in-image" />
-                  <img src={insta} />
+                <img
+                    src={theme === "dark" ? fb : fblight}
+                    className="date-in-image"
+                  />
+                  <img src={theme === "dark" ? insta : instalight} />
                 </div>
               </div>
             </div>
@@ -189,44 +206,31 @@ const ArticleCMS = () => {
             </Col>
           </Row>
           <Row className="article-card-first-row">
-            <Col lg={6}>
-              <Link to="/ArticleCMS2">
-                <div className="articles-card-main-wrapper">
-                  <div className="articles-card-main-heading">
-                    <h3>
-                      Active vs Passive Management: balancing fees for investor
-                      benefit
-                    </h3>
-                  </div>
-                  <div className="articles-card-main-para">
-                    <p>
-                      In the investment realm, the active versus passive
-                      management debate is age-old. Passive management, with its
-                      straightforward, cost-effective approach, mirrors market
-                      returns. Active management, on the other hand, strives to
-                      outperform the market, often at a higher fee.
-                    </p>
-                  </div>
-                  <div className="d-flex justify-content-end">
-                    <button className="articles-card-main-btn">
-                      <img src={arrow_down} alt="..." />
-                    </button>
-                  </div>
-                </div>
-              </Link>
-            </Col>
+    
 
             <Col lg={6}>
               <Link to="/ArticleCMS1">
-                <div className="articles-card-main-wrapper">
+                <div
+                  className={
+                    theme === "dark"
+                      ? "articles-card-main-wrapper"
+                      : "articles-card-main-wrapper-light"
+                  }
+                >
                   <div className="articles-card-main-heading">
-                    <h3>
+                    <h3
+                      style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                    >
                       Unveiling a New Era in Investment: The Collective
                       Intelligence Approach
                     </h3>
                   </div>
                   <div className="articles-card-main-para">
-                    <p>
+                    <p
+                      style={{
+                        color: theme === "dark" ? "#b2b2b2" : "#596780",
+                      }}
+                    >
                       Asset management is witnessing a revolution, one inspired
                       by the ingenious insights of Ray Dalio and his advocacy
                       for meritocracy and collective intelligence. This novel
@@ -236,8 +240,64 @@ const ArticleCMS = () => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-end">
-                    <button className="articles-card-main-btn">
-                      <img src={arrow_down} alt="..." />
+                    <button
+                      className={
+                        theme === "dark"
+                          ? "articles-card-main-btn"
+                          : "articles-card-main-btn-light"
+                      }
+                    >
+                      <img
+                        src={theme === "dark" ? arrow_down : nextLight}
+                        alt="..."
+                      />
+                    </button>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+            <Col lg={6}>
+              <Link to="/ArticleCMS2">
+                <div
+                  className={
+                    theme === "dark"
+                      ? "articles-card-main-wrapper"
+                      : "articles-card-main-wrapper-light"
+                  }
+                >
+                  <div className="articles-card-main-heading">
+                    <h3
+                      style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                    >
+                      Active vs Passive Management: balancing fees for investor
+                      benefit
+                    </h3>
+                  </div>
+                  <div className="articles-card-main-para">
+                    <p
+                      style={{
+                        color: theme === "dark" ? "#b2b2b2" : "#596780",
+                      }}
+                    >
+                      In the investment realm, the active versus passive
+                      management debate is age-old. Passive management, with its
+                      straightforward, cost-effective approach, mirrors market
+                      returns. Active management, on the other hand, strives to
+                      outperform the market, often at a higher fee.
+                    </p>
+                  </div>
+                  <div className="d-flex justify-content-end">
+                    <button
+                      className={
+                        theme === "dark"
+                          ? "articles-card-main-btn"
+                          : "articles-card-main-btn-light"
+                      }
+                    >
+                      <img
+                        src={theme === "dark" ? arrow_down : nextLight}
+                        alt="..."
+                      />
                     </button>
                   </div>
                 </div>
@@ -245,17 +305,31 @@ const ArticleCMS = () => {
             </Col>
           </Row>
           <Row>
+        
+
             <Col lg={6}>
               <Link to="/ArticleCMS3">
-                <div className="articles-card-main-wrapper">
+                <div
+                  className={
+                    theme === "dark"
+                      ? "articles-card-main-wrapper"
+                      : "articles-card-main-wrapper-light"
+                  }
+                >
                   <div className="articles-card-main-heading">
-                    <h3>
+                    <h3
+                      style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                    >
                       Empowering investors with full control: the OneUp
                       commitment
                     </h3>
                   </div>
                   <div className="articles-card-main-para">
-                    <p>
+                    <p
+                      style={{
+                        color: theme === "dark" ? "#b2b2b2" : "#596780",
+                      }}
+                    >
                       In the fast-paced world of personal finance, being in
                       charge and clearly understanding your investments is
                       critical. OneUp is here to make that happen. Our platform
@@ -264,8 +338,17 @@ const ArticleCMS = () => {
                     </p>
                   </div>
                   <div className="d-flex justify-content-end">
-                    <button className="articles-card-main-btn">
-                      <img src={arrow_down} alt="..." />
+                    <button
+                      className={
+                        theme === "dark"
+                          ? "articles-card-main-btn"
+                          : "articles-card-main-btn-light"
+                      }
+                    >
+                      <img
+                        src={theme === "dark" ? arrow_down : nextLight}
+                        alt="..."
+                      />
                     </button>
                   </div>
                 </div>
@@ -273,14 +356,23 @@ const ArticleCMS = () => {
             </Col>
           </Row>
         </Container>
-        <div className="expert-team-wrapper-articles">
+        <div
+          className={
+            theme === "dark"
+              ? "expert-team-wrapper-articles"
+              : "expert-team-wrapper-articles-light"
+          }
+        >
           <Container className="mx-sm-auto mx-0">
             <ExpertTeam />
           </Container>
         </div>
+        <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+     
         <Container className="mx-sm-auto mx-0">
           <FAQs />
         </Container>
+        </div>
         <JoinNow />
         <Footer />
       </div>

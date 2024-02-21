@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "../../ThemeContext";
 import "./Pricing.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -16,6 +16,9 @@ import ticklight from "../../assets/light/ticklight.png";
 const Pricing = () => {
   const { theme } = useTheme();
   const [checked, setChecked] = React.useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={theme === "dark" ? "pricing-page-main-wrapper-dark" : ""}>
       <Navigation />
@@ -446,9 +449,13 @@ const Pricing = () => {
           </Row>
         </Container>
       </div>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+     
       <Container>
         <FAQs />
       </Container>
+
+      </div>
 
       <JoinNow />
       <Footer />

@@ -85,7 +85,8 @@ const FAQs = () => {
                           setShowFaqs1(0);
                         } else setShowFaqs1(da.id);
                       }}
-                      style={{width :"24px" , height:"24px"}}
+                      style={{width :"24px" , height:"24px" ,    filter: "invert(38%) sepia(71%) saturate(506%) hue-rotate(188deg) brightness(90%) contrast(86%)"
+                    }}
                     />
                   </div>
                 </div>

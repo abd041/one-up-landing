@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "../../ThemeContext";
 import { Container, Row, Col } from "react-bootstrap";
 import "./About.css";
@@ -13,8 +13,11 @@ import Footer from "../../components/Footer/Footer";
 import bg_article from "../../assets/dark/about/bg_article.png"
 const About = () => {
   const { theme } = useTheme();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}>
+  <div className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}>
       <Navigation/>
       <Container>
         <Row className="about-main-heading-row">
@@ -50,8 +53,10 @@ Why not start with replicating your first fund with us? It's a simple, effective
         </div>
 
         <ExpertTeam />
-        <FAQs />
       </Container>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <Container><FAQs /></Container>
+      </div>
       <JoinNow />
       <Footer/>
     </div>

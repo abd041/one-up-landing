@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTheme } from "../../ThemeContext";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Error.css"
 import error from "../../assets/dark/articles/error.png"
+import Navigation from '../../components/Nav/Navigation';
+import Footer from '../../components/Footer/Footer';
 const Error = () => {
     const { theme } = useTheme();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
-    <div className={theme === "dark" ? "" : ''}>
+    <div className={   theme === "dark"
+    ? "Homepage-Hero-warpper-dark"
+    : "Homepage-Hero-warpper-dark-light"}>
+      <Navigation/>
         <Container>
-            <Row>
-                <Col lg={6} className='mx-auto'>
+            <Row style={{minHeight:'617px'}}>
+                <Col lg={6} className='mx-auto my-auto' >
                 <div className='error-page-main-wrap'><img src={error} /></div>
                <div className='error-heading'>
                 <h4>Network Error!!</h4>
@@ -24,6 +32,7 @@ const Error = () => {
                 </Col>
             </Row>
         </Container>
+        <Footer/>
 
     </div>
   )

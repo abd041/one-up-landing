@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTheme } from '../../ThemeContext'
 import "./Home.css"
 import { Container } from "react-bootstrap"
@@ -13,6 +13,9 @@ import { JoinNow } from '../../components/JoinNow/JoinNow';
 const Home = () => {
 
   const { theme } = useTheme();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
       <Navigation />

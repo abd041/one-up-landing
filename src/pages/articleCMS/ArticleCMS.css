@@ -15,7 +15,6 @@
 
 .article-heading-below-image-para > h3 {
   max-width: 800px;
-  color: var(--Primary-0, #fff);
   font-family: Satoshi;
   font-size: 24px;
   font-style: normal;
@@ -26,7 +25,6 @@
 }
 
 .list-main-items-article {
-  color: var(--body-txt, #b2b2b2);
   text-align: justify;
   font-family: Satoshi;
   font-size: 12px;
@@ -37,11 +35,12 @@
   background-color: transparent;
   border: none;
   padding: 4px;
+  cursor: pointer;
+  color: #FFF;
 }
 
 .list-main-items-article:hover {
   background-color: transparent;
-  color: var(--body-txt, #b2b2b2);
   text-align: justify;
   font-family: Satoshi;
   font-size: 12px;
@@ -52,10 +51,42 @@
   background-color: transparent;
   border: none;
   padding: 4px;
+  color: #FFF;
+}
+
+
+
+.list-main-items-article-light {
+  text-align: justify;
+  font-family: Satoshi;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  letter-spacing: -0.24px;
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #90A3BF;
+}
+
+.list-main-items-article-light:hover {
+  background-color: transparent;
+  text-align: justify;
+  font-family: Satoshi;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 18px */
+  letter-spacing: -0.24px;
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+  color: #90A3BF;
 }
 
 .list-table-of-content > h4 {
-  color: var(--Primary-0, #fff);
   text-align: justify;
   font-family: Satoshi;
   font-size: 16px;
@@ -83,7 +114,6 @@
   margin-bottom: 24px;
 }
 .aricle-cms-main-para > h4{
-  color: #FFF;
 
 /* Bold/Type@40 */
 font-family: Satoshi;
@@ -95,7 +125,6 @@ letter-spacing: -1.2px;
 }
 
 .aricle-cms-main-heading > h4{
-  color: var(--Primary-0, #FFF);
   text-align: justify;
   
   /* Medium/Type@16 */
@@ -110,7 +139,6 @@ letter-spacing: -1.2px;
 }
 
 .aricle-cms-main-heading > h4 > span{
-  color: var(--body-txt, #B2B2B2);
 text-align: justify;
 
 /* Medium/Type@16 */
@@ -125,7 +153,6 @@ letter-spacing: -0.32px;
 
 
 .aricle-cms-main-heading > p{
-  color: var(--body-txt, #B2B2B2);
 text-align: justify;
 
 /* Medium/Type@16 */
@@ -141,7 +168,7 @@ margin-bottom: 0;
 
 
 .aricle-cms-main-heading > p > span{
-  color: var(--body-txt, #B2B2B2);
+
 text-align: justify;
 
 /* Medium/Type@16 */
@@ -157,7 +184,6 @@ padding-right: 8px;
 
 
 .date-in-article >p{
-  color: var(--body-txt, #B2B2B2);
 text-align: justify;
 
 /* Regular/Type@16 */

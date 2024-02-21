@@ -8,7 +8,7 @@
 }
 
 .article-resources-heading > h6 {
-  color: var(--Primary-0, #fff);
+
   font-family: Satoshi;
   font-size: 14px;
   font-style: normal;
@@ -19,7 +19,6 @@
 }
 
 .article-investing-heading > h1 {
-  color: var(--Primary-0, #fff);
   font-family: Satoshi;
   font-size: 40px;
   font-style: normal;
@@ -30,7 +29,7 @@
 }
 
 .article-investing-discover > p {
-  color: var(--body-txt, #b2b2b2);
+
 
   /* Medium/Type@16 */
   font-family: Satoshi;
@@ -54,8 +53,22 @@
   max-width: 628px;
 }
 
+.articles-card-main-wrapper-light {
+  padding: 24px;
+  max-width: 628px;
+  border-radius: 17px;
+  border: 1px solid var(--Secondary-200, #C3D4E9);
+  background: #FFF;
+}
+.articles-card-main-wrapper-light:hover {
+  padding: 24px;
+  max-width: 628px;
+  border-radius: 17px;
+border: 1px solid #11172A;
+background: #FFF;
+}
+
 .articles-card-main-heading > h3 {
-  color: var(--Primary-0, #fff);
 
   /* Bold/Type@24 */
   font-family: Satoshi;
@@ -67,7 +80,6 @@
 }
 
 .articles-card-main-para {
-  color: var(--body-txt, #b2b2b2);
   margin-bottom: 12px;
 }
 .articles-card-main-para > p {
@@ -97,6 +109,21 @@
   border: 1px solid #4d4d4e;
   background-color: #0d0d0d00;
 }
+.articles-card-main-btn-light {
+  display: flex;
+  width: 48px;
+  height: 50px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  /* border: 1px solid var(--Secondary-300, #90A3BF); */
+  border: none;
+  background: transparent;
+}
+
+
 
 .articles-card-main-wrapper:hover {
   background: #212121;
@@ -115,6 +142,9 @@
   gap: 8px;
 }
 
+
+/*  */
+
 .articles-card-main-btn:hover > img {
   filter: brightness(0.5);
 }
@@ -126,6 +156,15 @@
 .expert-team-wrapper-articles {
   border: 1px solid var(--Secondary-500, #1a202c);
   background: #121212;
+}
+
+.expert-team-wrapper-articles-light {
+  /* border: 1px solid var(--Secondary-500, #1a202c); */
+  background: 
+  radial-gradient(840px 960px at max(0px, -512px + 50vw) 0%, rgba(78, 106, 191, 0.15) 9.29%, rgba(78, 106, 191, 0) 100%), rgb(255, 255, 255)
+  radial-gradient(520px 520px at calc(max(0px, -512px + 50vw) + min(100vw, 1024px)) 80vh, rgba(78, 106, 191, 0.15) 9.29%, rgba(78, 106, 191, 0) 100%);
+overflow-x: clip;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -150,7 +189,7 @@
   }
 
   .article-investing-heading > h1 {
-    color: var(--Primary-0, #fff);
+
     text-align: center;
     font-family: Satoshi;
     font-size: 40px;
@@ -161,7 +200,6 @@
   }
 
   .article-investing-discover {
-    color: var(--body-txt, #b2b2b2);
     text-align: center;
 
     /* Medium/Type@16 */

@@ -19,7 +19,7 @@ const About = () => {
       <Container>
         <Row className="about-main-heading-row">
           <Col lg={8} className="mx-auto">
-            <div className={theme === "dark" ? "about-page-main-heading" : ""}>
+            <div className={theme === "dark" ? "about-page-main-heading" : "about-page-main-heading-light"}>
               <h3>
                 ABOUT ONE<span>UP</span>
               </h3>

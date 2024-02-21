@@ -18,7 +18,7 @@ const Benefit = () => {
     <div>
       <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
-          <Row className="benefit-main-wrapper-first">
+          <Row  className={theme === 'dark' ? "benefit-main-wrapper-first" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -70,7 +70,7 @@ const Benefit = () => {
       </div>
       <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
-          <Row className="benefit-main-wrapper">
+          <Row className= {theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -122,7 +122,7 @@ const Benefit = () => {
       </div>
       <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
-          <Row className="benefit-main-wrapper">
+          <Row className={theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div
@@ -174,7 +174,7 @@ const Benefit = () => {
       </div>
       <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
         <Container>
-          <Row className="benefit-main-wrapper">
+          <Row className={theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
               <div className="benefits-left-main-heading">
                 <div

@@ -1,11 +1,19 @@
 .Join_now_main_wrapper {
   max-height: 821px;
-  background-image: url("../../assets/dark/Join_Now/Join_Now.png");
+ background-image: url("../../assets/dark/Join_Now/Join_Now.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.Join_now_main_wrapper-light{
+  max-height: 821px;
+  background-image: url("../../assets/dark/Join_Now/Join.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #445ca7
+}
 .join-page-main-heading > h3 > span {
   color: var(--Primary-500, #5573d1);
 

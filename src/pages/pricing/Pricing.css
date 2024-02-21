@@ -2,10 +2,9 @@
   background: #121212;
   width: 100%;
 }
-.pricing-main-container-wrapper{
+.pricing-main-container-wrapper {
   padding: 68px 0px;
 }
-
 
 .pricing-card-main-wrap {
   padding: 24px;
@@ -14,6 +13,17 @@
   max-width: 373px;
   min-height: 631px;
   margin-bottom: 39px;
+}
+
+.pricing-card-main-wrap-light {
+  padding: 24px;
+  border-radius: 24px;
+  max-width: 373px;
+  min-height: 631px;
+  margin-bottom: 39px;
+  border-radius: 24px;
+  border: 1px solid var(--Secondary-200, #c3d4e9);
+  background: #fff;
 }
 
 .pricing-first-heading-wrap {
@@ -31,8 +41,6 @@
 }
 
 .pricing-first-heading-main > h4 {
-  color: #fff;
-
   /* Semibold/Type@32 */
   font-family: Inter;
   font-size: 32px;
@@ -47,8 +55,6 @@
 }
 
 .pricing-desc > p {
-  color: var(--body-txt, #b2b2b2);
-
   /* Regular/Type@16 */
   font-family: Satoshi;
   font-size: 16px;
@@ -62,12 +68,10 @@
 .pricing-main-value {
   display: flex;
   padding-bottom: 24px;
-  border-bottom: 1px solid #1d334f;
 }
 
 .pricing-main-value > h1 {
   margin-bottom: 0px;
-  color: #fff;
   text-align: center;
 
   /* Semibold/Type@40 */
@@ -80,8 +84,6 @@
 }
 
 .pricing-main-value > h1 > span {
-  color: var(--body-txt, #b2b2b2);
-
   /* Medium/Type@18 */
   font-family: Satoshi;
   font-size: 18px;
@@ -97,8 +99,6 @@
 }
 
 .princing-description > p {
-  color: var(--body-txt, #b2b2b2);
-
   /* Medium/Type@16 */
   font-family: Satoshi;
   font-size: 16px;
@@ -139,7 +139,6 @@
 }
 
 .pricing-main-heading > h4 {
-  color: #fff;
   text-align: center;
 
   /* Bold/Type@40 */
@@ -157,7 +156,6 @@
   margin-bottom: 39px;
 }
 .pricing-main-description > h3 {
-  color: var(--Secondary-100, #f3f5f7);
   text-align: center;
 
   /* Regular/Type@20 */
@@ -171,8 +169,6 @@
 }
 
 .pricing-monthly-heading > h4 {
-  color: #fff;
-
   /* Semibold/Type@20 */
   font-family: Inter;
   font-size: 20px;
@@ -185,8 +181,6 @@
 }
 
 .pricing-yearly-heading > h5 {
-  color: #fff;
-
   /* Semibold/Type@20 */
   font-family: Inter;
   font-size: 20px;
@@ -204,6 +198,34 @@
   margin-bottom: 80px;
 }
 
+.open-account-btn-wrapper-light {
+  max-width: 520px;
+  height: 52px;
+  margin-bottom: 80px;
+}
+
+.open-account-btn-wrapper-light > button {
+  display: flex;
+  border: none;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #4e6abf;
+  color: var(--Primary-0, #fff);
+  text-align: center;
+
+  /* Semibold/Type@16 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
 .open-account-btn-wrapper > button {
   display: flex;
   border: none;
@@ -240,7 +262,6 @@
 }
 
 .pricing-additional-cancellation-pricing > p {
-  color: var(--Primary-0, #fff);
 
   /* Regular/Type@18 */
   font-family: Satoshi;
@@ -253,7 +274,6 @@
 }
 
 .pricing-additional-cancellation-pricing > p > span {
-  color: var(--Primary-0, #fff);
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -270,10 +290,58 @@
   background: #121212;
 }
 
+.pricing-additional-information-main-wrapper-light {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border: 1px solid var(--Secondary-500, #dde3f6);
+  background: radial-gradient(
+      840px 960px at max(0px, -512px + 50vw) 0%,
+      rgba(78, 106, 191, 0.15) 9.29%,
+      rgba(78, 106, 191, 0) 100%
+    ),
+    rgb(255, 255, 255)
+      radial-gradient(
+        520px 520px at calc(max(0px, -512px + 50vw) + min(100vw, 1024px)) 80vh,
+        rgba(78, 106, 191, 0.15) 9.29%,
+        rgba(78, 106, 191, 0) 100%
+      );
+  overflow-x: clip;
+}
+
 .pricing-additional-info-btn {
   width: 380px;
   height: 50px;
 }
+
+.pricing-additional-info-btn-light{
+  width: 380px;
+  height: 50px;
+}
+
+.pricing-additional-info-btn-light > button{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 13px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 6px;
+  background: var(--C1, #4E6ABF);
+  color: var(--Primary-0, #fff);
+  border: none;
+  text-align: center;
+
+  /* Semibold/Type@16 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.32px;
+}
+
 
 .pricing-additional-info-btn > button {
   width: 100%;
@@ -299,17 +367,15 @@
   letter-spacing: -0.32px;
 }
 
+@media screen and (max-width: 768px) {
+  .pricing-additional-info-btn {
+    width: 100%;
+  }
+  .pricing-main-container-wrapper {
+    padding: 40px 0px;
+  }
 
-
-@media screen and (max-width:768px) {
-    .pricing-additional-info-btn {
-        width: 100%;
-    }
-    .pricing-main-container-wrapper{
-      padding: 40px 0px;
-    }
-
-    .open-account-btn-wrapper{
-      margin-bottom: 0px;
-    }
+  .open-account-btn-wrapper {
+    margin-bottom: 0px;
+  }
 }

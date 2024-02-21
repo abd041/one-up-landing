@@ -42,7 +42,6 @@ const FAQs = () => {
       q1: "How does OneUp adjust my strategy if new positions are added by the portfolio manager?",
       a1: "Our system ensures your portfolio aligns with your chosen strategy by automatically adjusting holdings based on the portfolio manager's actions. If new positions are acquired, we proportionally rebalance your portfolio to maintain strategy alignment.",
     },
-  
   ];
   return (
     <Row className="faqs-main-row-wrap">
@@ -54,62 +53,62 @@ const FAQs = () => {
         </div>
       </Col>
       <Col lg={9} md={8} className="mx-md-auto mx-lg-0">
-      {data.map((da) => {
-              return (
+        <div className={theme === "dark" ? "" : "faqs-main-bg-light"}>
+          {data.map((da) => {
+            return (
+              <div
+                className={
+                  da.id == showFaq1
+                    ? `faqs-content-main-wrapper ms-auto ${theme === "dark"
+                      ? "faqs-content-main-wrapper-dark-border"
+                      : "faqs-content-main-wrapper-light-border"
+                    }`
+                    : "faqs-content-main-wrapper-inactive ms-auto"
+                }
+              >
+                <div
+                  className={`d-flex justify-content-between w-100 ${theme === "dark"
+                      ? "faqs-content-main-heading-main-wrapper"
+                      : "faqs-content-main-heading-main-wrapper-white"
+                    } `}
+                >
+                  <div className="faqs-content-main-heading">
+                    <h4 style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}>
+                      {da.q1}
+                    </h4>
+                  </div>
+                  <div>
+                    <img
+                      src={da.id === showFaq1 ? Minus : add}
+                      onClick={() => {
+                        if (da.id == showFaq1) {
+                          setShowFaqs1(0);
+                        } else setShowFaqs1(da.id);
+                      }}
+                      style={{width :"24px" , height:"24px"}}
+                    />
+                  </div>
+                </div>
                 <div
                   className={
                     da.id == showFaq1
-                      ? `faqs-content-main-wrapper ms-auto ${
-                          theme === "dark"
-                            ? "faqs-content-main-wrapper-dark-border"
-                            : "faqs-content-main-wrapper-light-border"
-                        }`
-                      : "faqs-content-main-wrapper-inactive ms-auto"
+                      ? "faqs-text-heading"
+                      : "faqs-text-heading-inactive"
                   }
                 >
-                  <div
-                    className={`d-flex justify-content-between w-100 ${
-                      theme === "dark"
-                        ? "faqs-content-main-heading-main-wrapper"
-                        : "faqs-content-main-heading-main-wrapper-white"
-                    } `}
+                  <p
+                    style={{
+                      color: theme === "dark" ? "#AAADB1" : "#596780",
+                    }}
                   >
-                    <div className="faqs-content-main-heading">
-                      <h4
-                        style={{ color: theme === "dark" ? "#FFF" : "#11172A" }}
-                      >
-                        {da.q1}
-                      </h4>
-                    </div>
-                    <div>
-                      <img
-                        src={da.id === showFaq1 ? Minus : add}
-                        onClick={() => {
-                          if (da.id == showFaq1) {
-                            setShowFaqs1(0);
-                          } else setShowFaqs1(da.id);
-                        }}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className={
-                      da.id == showFaq1
-                        ? "faqs-text-heading"
-                        : "faqs-text-heading-inactive"
-                    }
-                  >
-                    <p
-                      style={{
-                        color: theme === "dark" ? "#AAADB1" : "#596780",
-                      }}
-                    >
-                      {da.a1}
-                    </p>
-                  </div>
+                    {da.a1}
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
+        </div>
+
         <div className={"faqs-content-main-wrapper-inactive ms-auto"}>
           <div className="faqs-main-links">
             <Link to="/faq">

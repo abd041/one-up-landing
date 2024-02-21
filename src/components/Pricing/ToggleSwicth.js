@@ -1,7 +1,9 @@
 import React from 'react'
 import "./ToggleSwicth.css"
+import { useTheme } from '../../ThemeContext';
 const ToggleSwicth = ({ isOn, handleToggle, colorOne, colorTwo }) => {
-    return (
+  const { theme } = useTheme(); 
+  return (
       <>
         <input
           checked={isOn}
@@ -15,7 +17,7 @@ const ToggleSwicth = ({ isOn, handleToggle, colorOne, colorTwo }) => {
           className="switch-label"
           htmlFor={`switch`}
         >
-          <span className={`switch-button`} />
+          <span style={{background:theme === "dark" ? "black" :"white"}} className={`switch-button`} />
         </label>
       </>
     );

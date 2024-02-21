@@ -3,9 +3,11 @@ import "./JoinNow.css";
 import arrowRight from "../../assets/dark/Join_Now/arrow-right.png";
 import { Row, Col } from "react-bootstrap";
 import Join_now_image from "../../assets/dark/Join_Now/join_now_image.png";
+import { useTheme } from "../../ThemeContext";
 export const JoinNow = () => {
+  const { theme } = useTheme();
   return (
-    <div className="Join_now_main_wrapper">
+    <div className={ theme === "dark" ? "Join_now_main_wrapper" :"Join_now_main_wrapper-light"}>
       <Row className="m-0">
         <Col className="mx-auto">
           <div className="join-page-main-wrap-heading">

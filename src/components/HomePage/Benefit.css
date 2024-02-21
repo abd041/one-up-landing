@@ -1,12 +1,15 @@
 .benefit-main-wrapper {
   padding: 180px 0px;
-  /* border-bottom: 1px solid #404040; */
+  border-bottom: 1px solid #404040;
 }
 
 .benefit-main-wrapper-first {
   padding: 180px 0px;
-  /* border-bottom: 1px solid #404040; */
-  /* border-top: 1px solid #404040; */
+  border-bottom: 1px solid #404040; 
+   border-top: 1px solid #404040;
+}
+.benefit-main-wrapper-first-light{
+  padding: 180px 0px;
 }
 
 .benefit-left-heading {

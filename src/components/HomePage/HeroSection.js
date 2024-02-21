@@ -12,11 +12,12 @@ import expert_five from "../../assets/dark/about/expert_five.png";
 import arrow from "../../assets/dark/Homepage/arrow-right.png";
 import Line1 from "../../assets/dark/Homepage/line.png";
 import Line2 from "../../assets/dark/Homepage/line1.png";
-import team1 from "../../assets/light/team1.png"
-import team2 from "../../assets/light/team2.png"
-import team3 from "../../assets/light/team3.png"
-import team4 from "../../assets/light/team4.png"
-import team5 from "../../assets/light/team5.png"
+import team1 from "../../assets/light/team1.png";
+import team2 from "../../assets/light/team2.png";
+import team3 from "../../assets/light/team3.png";
+import team4 from "../../assets/light/team4.png";
+import team5 from "../../assets/light/team5.png";
+import lineoneLight from "../../assets/light/Line1 ligh.png"
 const Hero = () => {
   const { theme } = useTheme();
   return (
@@ -33,11 +34,11 @@ const Hero = () => {
             <div className="hero-section-main-wrapper mx-auto">
               <div className="hero-lines-wrapper-second">
                 {" "}
-                <img src={Line2} />
+                <img src={Line2} id={theme === "dark" ? "" : "line2"}/>
               </div>
               <div className="hero-lines-wrapper">
                 <div>
-                  <img src={Line1} />
+                  <img src={Line1} id={theme === "dark" ? "" : "line2"} />
                 </div>
               </div>
               <div className="hero-main-heading d-flex justify-content-center">
@@ -73,7 +74,7 @@ const Hero = () => {
             </div>
           </Col>
         </Row>
-        <Row className="expert-team-hero-section" >
+        <Row className="expert-team-hero-section">
           <Col lg={9} className="mx-auto" style={{ width: "100%" }}>
             <div style={{ width: "100%" }}>
               <div className="expert-team-haeding text-center">
@@ -84,13 +85,16 @@ const Hero = () => {
                 style={{ width: "100%" }}
               >
                 <div>
-                  <img src={ theme === "dark" ? expert_one : team1} alt="..." />
+                  <img src={theme === "dark" ? expert_one : team1} alt="..." />
                 </div>
                 <div>
                   <img src={theme === "dark" ? expert_two : team2} alt="..." />
                 </div>
                 <div>
-                  <img src={theme === "dark" ? expert_three : team3} alt="..." />
+                  <img
+                    src={theme === "dark" ? expert_three : team3}
+                    alt="..."
+                  />
                 </div>
                 <div>
                   <img src={theme === "dark" ? expert_four : team4} alt="..." />

@@ -6,6 +6,10 @@
   background: transparent
 } */
 
+#line2 {
+  filter: invert(40%) sepia(15%) saturate(2209%) hue-rotate(187deg) brightness(98%) contrast(85%);
+}
+
 .hero-main-heading {
   margin-bottom: 24px;
 }

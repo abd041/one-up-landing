@@ -24,7 +24,7 @@ const About = () => {
           <Col lg={8} className="mx-auto">
             <div className={theme === "dark" ? "about-page-main-heading" : "about-page-main-heading-light"}>
               <h3>
-                ABOUT ONE<span>UP</span>
+                ABOUT One<span>Up</span>
               </h3>
             </div>
             <div className="about-page-main-para">

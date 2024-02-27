@@ -13,7 +13,7 @@ export const JoinNow = () => {
           <div className="join-page-main-wrap-heading">
             <div className={"join-page-main-heading"}>
               <h3>
-                Join ONE<span>UP</span> Today
+                Join One<span>Up</span> Today
               </h3>
             </div>
             <div className="join-page-main-para">

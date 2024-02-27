@@ -205,13 +205,13 @@ The burning question is :  do the perks of active management outweigh its costs?
         <ArticleHeading title="Responsive Market Strategies" />
         <AbouPara title="Active managers swiftly adapt to market shifts, tweaking portfolios to seize opportunities and cushion risks. This agility is priceless during volatile markets or economic fluxes, safeguarding and boosting your investments." />
 
-        <ArticleHeading title="Mastering Market Inefficiencies : " />
+        <ArticleHeading title="Mastering Market Inefficiencies" />
         <AbouPara title="Active managers excel in uncovering and leveraging market inefficiencies. Their thorough research can unearth hidden gems, outperforming passive strategies and amplifying long-term wealth accumulation." />
 
         <ArticleHeading title="Tailored Portfolio Solutions" />
         <AbouPara title="Active management means personalized portfolio strategies, aligning with individual investor goals, risk appetites, and timelines, unlike passive strategies that rigidly follow set indices." />
 
-        <ArticleHeading title="Strategic Risk Management : " />
+        <ArticleHeading title="Strategic Risk Management" />
         <AbouPara title="Active managers wield various risk management tactics, including hedging and asset reallocation, to fortify portfolios against market downturns, enhancing long-term gains." />
 
         <ArticleHeading title="Rethinking Fees in Active Management" />

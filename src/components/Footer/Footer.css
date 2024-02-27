@@ -8,6 +8,35 @@
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-between; /* Spread items evenly */
   }
+
+
+  .light-theme-footer{
+    background-color: white;
+  }
+  
+.footer-b-1 > h3 > span {
+  color: var(--Primary-500, #5573d1);
+
+  /* Bold/Type@72 */
+  font-family: Satoshi;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+}
+
+.footer-b-1 > h3{
+  color: #fff;
+  text-align: left;
+  font-family: Satoshi;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  margin-bottom: 8px;
+}
   
   .footer-heading > h1 {
     text-align: justify;

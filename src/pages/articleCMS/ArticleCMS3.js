@@ -18,6 +18,8 @@ import { Link } from "react-router-dom";
 import fblight from "../../assets/light/fb_light.png";
 import instalight from "../../assets/light/insta_light.png";
 import nextLight from "../../assets/light/nextlight.png";
+import { FacebookShareButton } from "react-share";
+import ArticleNavigation from "../../components/Nav/ArticleNavigation";
 
 const ArticleCMS3 = () => {
   const { theme } = useTheme();
@@ -27,6 +29,15 @@ const ArticleCMS3 = () => {
 
   const headingRef = useRef(null);
   const contentShow = useRef(null);
+
+  const articleUrl = "https://one-up-landing.vercel.app/ArticleCMS2";
+
+  const handleShare = () => {
+
+    window.open(`https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+
+  };
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -85,10 +96,10 @@ const ArticleCMS3 = () => {
   };
   return (
     <div
-      className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}
+      className={theme === "dark" ? "about-page-main-wrapper-dark" : "white-background-wrap"}
       ref={contentRef}
     >
-      <Navigation />
+      <ArticleNavigation />
       <Container>
         {!reachedLastHeading && (
        <div className="toc-container">
@@ -146,11 +157,17 @@ const ArticleCMS3 = () => {
                   <p    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>Feb 1, 2024 . 6 min read</p>
                 </div>
                 <div>
-                <img
+                <FacebookShareButton
+                url={"https://one-up-landing.vercel.app/ArticleCMS3"}
+                quote={"Empowering investors with full control: the OneUp commitment"}
+                hashtag="#oneup">
+                 <img
                     src={theme === "dark" ? fb : fblight}
                     className="date-in-image"
                   />
-                  <img src={theme === "dark" ? insta : instalight} />
+              </FacebookShareButton>
+               
+                  <img src={theme === "dark" ? insta : instalight}  onClick={handleShare}/>
                 </div>
               </div>
             </div>
@@ -185,7 +202,7 @@ const ArticleCMS3 = () => {
         <AbouPara title="OneUp isn't just a platform; it's a movement towards smarter, more personalized investing. We'rehere to make sure your investments work tirelessly for you. Embrace control, transparency, and personalization with OneUp. Step into a new era of investing" />
       </Container>
       <div
-        className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}
+        className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
           <Row>

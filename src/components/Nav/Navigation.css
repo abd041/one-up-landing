@@ -6,6 +6,13 @@
   width: 40%;
 }
 
+
+.light-theme-navigation-border{
+  background: #FFF;
+  border: 1px solid var(--Primary-100, #DDE3F6);
+background: var(--Primary-0, #FFF);
+}
+
 .nav-first {
   width: 30%;
 }

@@ -10,13 +10,13 @@ import LogoLight from "../../assets/light/logo-light.png";
 import arrowdown from "../../assets/light/arrow-down.png";
 import lightbar from "../../assets/light/lightbar.png";
 
-const Navigation = () => {
+const ArticleNavigation = () => {
   const { theme } = useTheme();
   const [showResource, setShowResource] = useState(false);
   const [showResource1, setShowResource2] = useState(false);
   const [showNav, setShowNavbar] = useState(false);
   return (
-    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}>
+    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme-navigation-border"}`}>
       <div className="navigation-main-wrapper">
         <div
           className={
@@ -295,4 +295,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default ArticleNavigation;

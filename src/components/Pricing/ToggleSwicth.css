@@ -48,6 +48,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 39px;
+  position: relative;
 }
 
 .yealy-save-heading > h5 {
@@ -62,3 +63,8 @@
   letter-spacing: -0.28px;
 }
 
+.yearly-arrow-pricing{
+  position: absolute;
+  top: 20px;
+  left: -20px;
+}

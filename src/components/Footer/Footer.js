@@ -7,10 +7,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const { theme } = useTheme();
   return (
-    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}>
+    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme-footer"}`}>
       <div className="footer-main-wrapper">
         <div className="footer-b-1">
-          <img src={theme === "dark" ? logo : LogoLight} />
+        <h3 style={{color : theme === "dark" ? "#fff" :"#000"}}>
+              ONE<span>UP</span>
+              </h3>
         </div>
         <div className="footer-b-2">
           <div className="footer-heading">
@@ -70,11 +72,11 @@ const Footer = () => {
               About Us
             </h2>
           </Link>
-          <div className="footer-desc">
+          <Link to="/articles" className="footer-desc">
             <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
-              Blogs
+              Articles
             </h2>
-          </div>
+          </Link>
           <Link to="/faq" className="footer-desc">
             <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
               FAQ
@@ -88,14 +90,14 @@ const Footer = () => {
             </h1>
           </div>
           <div className="footer-desc">
-            <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
+            <a href="https://www.instagram.com/oneupinvest/" target="_blank" style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
               Instagram
-            </h2>
+            </a>
           </div>
           <div className="footer-desc">
-            <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
+            <a href="https://www.facebook.com/oneup.io" style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }} target="_blank">
               Facebook
-            </h2>
+            </a>
           </div>
         </div>
       </div>

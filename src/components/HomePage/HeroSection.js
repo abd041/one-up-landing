@@ -49,7 +49,7 @@ const Hero = () => {
                       : "hero-main-heading-light"
                   }
                 >
-                  Stop loosing $100,000s.
+                  Stop Losing $100,000s.
                 </h4>
               </div>
               <div className="hero-main-desc  d-flex justify-content-center">

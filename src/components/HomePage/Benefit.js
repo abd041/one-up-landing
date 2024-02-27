@@ -16,7 +16,7 @@ const Benefit = () => {
   const { theme } = useTheme();
   return (
     <div>
-      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'benfit-light-theme'}`}>
         <Container>
           <Row  className={theme === 'dark' ? "benefit-main-wrapper-first" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -68,7 +68,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'benfit-light-theme'}`}>
         <Container>
           <Row className= {theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -77,7 +77,7 @@ const Benefit = () => {
                   className={
                     theme === "dark"
                       ? "benefit-left-heading"
-                      : "benefit-left-heading-white"
+                    : "benefit-left-heading-white"
                   }
                 >
                   <h1>Manage your portfolio hands-free</h1>
@@ -120,7 +120,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'benfit-light-theme'}`}>
         <Container>
           <Row className={theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">
@@ -172,7 +172,7 @@ const Benefit = () => {
           </Row>
         </Container>
       </div>
-      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'benfit-light-theme'}`}>
         <Container>
           <Row className={theme === 'dark' ? "benefit-main-wrapper" : 'benefit-main-wrapper-first-light'}>
             <Col className="d-flex flex-md-row flex-column justify-content-md-between flex-column-reverse align-items-md-center">

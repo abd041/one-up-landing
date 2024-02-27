@@ -12,7 +12,8 @@ import FAQs from "../../components/Faqs/FAQs";
 import { JoinNow } from "../../components/JoinNow/JoinNow";
 import Footer from "../../components/Footer/Footer";
 import ticklight from "../../assets/light/ticklight.png";
-
+import arrow from "../../assets/light/Arrow_07.png"
+import arrowDark from "../../assets/dark/Arrow_07.png"
 const Pricing = () => {
   const { theme } = useTheme();
   const [checked, setChecked] = React.useState(false);
@@ -50,16 +51,19 @@ const Pricing = () => {
                 colorTwo="#6984D6"
               />
               <div className="pricing-yearly-heading">
-                <h5 style={{ color: theme === "dark" ? "#fff" : "#0D121F" }}>
+                <h5 style={{ color: theme === "dark" ? "#fff" : "#0D121F" , position:"relative" }}>
                   Yearly
+                  <img src={theme === "dark" ? arrowDark : arrow} className="yearly-arrow-pricing"/>
                 </h5>
               </div>
             </div>
 
             <div className="yealy-save-heading">
               <h5 style={{ color: theme === "dark" ? "#fff" : "#0D121F" }}>
-                Save 65%
+                Save 20%
+             
               </h5>
+             
             </div>
           </Col>
         </Row>
@@ -104,7 +108,7 @@ const Pricing = () => {
                   <span
                     style={{ color: theme === "dark" ? "#b2b2b2" : "#596780" }}
                   >
-                    /{!checked ? "month" : "year"}
+                    /{!checked ? "month" : "month"}
                   </span>
                 </h1>
               </div>
@@ -163,8 +167,8 @@ const Pricing = () => {
             <div
               className={
                 theme === "dark"
-                  ? "pricing-card-main-wrap"
-                  : "pricing-card-main-wrap-light"
+                  ? "pricing-card-main-wrap pricing-dark-mode-border"
+                  : "pricing-card-main-wrap-light pricing-light-mode-border"
               }
             >
               <div className="pricing-first-heading-wrap">
@@ -196,7 +200,7 @@ const Pricing = () => {
                   <span
                     style={{ color: theme === "dark" ? "#b2b2b2" : "#596780" }}
                   >
-                    /{!checked ? "month" : "year"}
+                    /{!checked ? "month" : "month"}
                   </span>
                 </h1>
               </div>
@@ -313,7 +317,7 @@ const Pricing = () => {
                   <span
                     style={{ color: theme === "dark" ? "#b2b2b2" : "#596780" }}
                   >
-                    /{!checked ? "month" : "year"}
+                    /{!checked ? "month" : "month"}
                   </span>
                 </h1>
               </div>

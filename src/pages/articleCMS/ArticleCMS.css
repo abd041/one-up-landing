@@ -4,6 +4,10 @@
   max-height: calc(100vh - 20px);
 }
 
+.white-background-wrap{
+  background-color: white;
+}
+
 .toc-container.scrollable {
   display: none;
 }

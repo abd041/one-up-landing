@@ -18,6 +18,8 @@ import art2 from "../../assets/dark/about/smarter.png";
 import fblight from "../../assets/light/fb_light.png";
 import instalight from "../../assets/light/insta_light.png";
 import nextLight from "../../assets/light/nextlight.png";
+import { FacebookShareButton } from "react-share";
+import ArticleNavigation from "../../components/Nav/ArticleNavigation";
 
 const ArticleCMS1 = () => {
   const { theme } = useTheme();
@@ -27,6 +29,15 @@ const ArticleCMS1 = () => {
 
   const headingRef = useRef(null);
   const contentShow = useRef(null);
+
+  const articleUrl = "https://one-up-landing.vercel.app/ArticleCMS1";
+
+  const handleShare = () => {
+
+    window.open(`https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -84,10 +95,10 @@ const ArticleCMS1 = () => {
   };
   return (
     <div
-      className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}
+      className={theme === "dark" ? "about-page-main-wrapper-dark" : "white-background-wrap"}
       ref={contentRef}
     >
-      <Navigation />
+      <ArticleNavigation />
       <Container>
         {!reachedLastHeading && (
           <div className="toc-container">
@@ -168,11 +179,17 @@ const ArticleCMS1 = () => {
                   </p>
                 </div>
                 <div>
-                  <img
+                <FacebookShareButton 
+                url={"https://one-up-landing.vercel.app/ArticleCMS1"}
+                quote={"Unveiling a New Era in Investment: The Collective Intelligence Approach"}
+                hashtag="#oneup">
+                 <img
                     src={theme === "dark" ? fb : fblight}
                     className="date-in-image"
                   />
-                  <img src={theme === "dark" ? insta : instalight} />
+              </FacebookShareButton>
+               
+                  <img src={theme === "dark" ? insta : instalight}  onClick={handleShare} />
                 </div>
               </div>
             </div>
@@ -215,7 +232,7 @@ const ArticleCMS1 = () => {
         <AbouPara title="“This innovative methodology is a game-changer in asset management. Fusing Ray Dalio’s principles with modern AI, it opens investment decision-making to a wider audience. It addresses critical issues of underperformance and transparency, marking a new chapter in investment – efficient, inclusive, and focused on investor success. Inspired by collective intelligence, it heralds a promising future in asset management.”" />
       </Container>
       <div
-        className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}
+        className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
           <Row>

@@ -19,6 +19,8 @@ import updated from "../../assets/dark/about/updated.png";
 import fblight from "../../assets/light/fb_light.png";
 import instalight from "../../assets/light/insta_light.png";
 import nextLight from "../../assets/light/nextlight.png";
+import {FacebookShareButton} from "react-share";
+import ArticleNavigation from "../../components/Nav/ArticleNavigation";
 
 const ArticleCMS = () => {
   const { theme } = useTheme();
@@ -26,8 +28,13 @@ const ArticleCMS = () => {
   const [reachedLastHeading, setReachedLastHeading] = useState(true); // Initially set to true to hide the table of contents
   const contentRef = useRef(null);
 
-  const headingRef = useRef(null);
-  const contentShow = useRef(null);
+  const articleUrl = "https://one-up-landing.vercel.app/ArticleCMS";
+
+  const handleShare = () => {
+
+    window.open(`https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -87,10 +94,10 @@ const ArticleCMS = () => {
 
   return (
     <div
-      className={theme === "dark" ? "about-page-main-wrapper-dark" : ""}
+      className={theme === "dark" ? "about-page-main-wrapper-dark" : "white-background-wrap"}
       ref={contentRef}
     >
-      <Navigation />
+      <ArticleNavigation />
       <Container>
         {!reachedLastHeading && (
           <div className="toc-container">
@@ -154,11 +161,17 @@ const ArticleCMS = () => {
                  >Feb 1, 2024 . 6 min read</p>
                 </div>
                 <div>
-                <img
+                <FacebookShareButton 
+                url={"https://one-up-landing.vercel.app/ArticleCMS"}
+                quote={"The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over Time"}
+                hashtag="#oneup">
+                 <img
                     src={theme === "dark" ? fb : fblight}
                     className="date-in-image"
                   />
-                  <img src={theme === "dark" ? insta : instalight} />
+              </FacebookShareButton>
+               
+                  <img src={theme === "dark" ? insta : instalight}  onClick={handleShare} />
                 </div>
               </div>
             </div>
@@ -195,7 +208,7 @@ const ArticleCMS = () => {
         <AbouPara title="Mutual fund fees, though often overlooked, have a tangible impact on your investments. By understanding and addressing these fees, you can make smarter choices for your financial future. OneUp’s innovative approach, merging tech-driven active management with a cost-effective subscription model, presents a compelling alternative. It’s time to step into a world where your investments work harder for you, free from the drag of traditional fees. Join OneUp and take control of your financial destiny." />
       </Container>
       <div
-        className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}
+        className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
           <Row>

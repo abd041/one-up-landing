@@ -166,17 +166,15 @@ min-height: 56px;
 
 
 @media screen and (max-width : 992px) {
-    .expert-team-image-five{
-        display: none;
-    }
-    .expert-team-first-image{
-        display: none;
-    }
-
     .about-stop-lossing-image-dark{
       height: auto;
     }
 
+
+    .expert-team-images-wrape > div > img{
+      min-height: 40px;
+      }
+      
 
     
 .about-page-main-heading > h3 > span {

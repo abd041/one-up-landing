@@ -89,16 +89,16 @@ const Footer = () => {
               Follow Us
             </h1>
           </div>
-          <div className="footer-desc">
-            <a href="https://www.instagram.com/oneupinvest/" target="_blank" style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
+          <a href="https://www.instagram.com/oneupinvest/" target="_blank" className="footer-desc">
+            <h2  style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
               Instagram
-            </a>
-          </div>
-          <div className="footer-desc">
-            <a href="https://www.facebook.com/oneup.io" style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }} target="_blank">
+            </h2>
+          </a>
+          <a href="https://www.facebook.com/oneup.io" className="footer-desc" target="_blank">
+            <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }} >
               Facebook
-            </a>
-          </div>
+            </h2>
+          </a>
         </div>
       </div>
     </div>

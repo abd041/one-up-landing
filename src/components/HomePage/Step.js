@@ -21,78 +21,82 @@ import threelight from "../../assets/light/threelight.png";
 import c3light from "../../assets/light/c3light.png";
 import thlight from "../../assets/light/thlight.png";
 
+import m1 from "../../assets/dark/m1.png";
+import m2 from "../../assets/dark/m2.png";
+import m3 from "../../assets/dark/m3.png";
+
 const Step = () => {
   const { theme } = useTheme();
   return (
-    <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
-         <Container>
-      <div className="step-main-wrapper">
-        <Row>
-          <Col className="d-flex d-lg-block justify-content-center">
-            <div className="step-main-heading">
-              <h4 style={{ color: theme === "dark" ? "#fff" : "#040815" }}>
-                Get Started in 3 Simple Steps
-              </h4>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={4} className="d-flex justify-content-center">
-            <div>
-              <div className="step-cards-wrapper">
-                <div className="step-card-one-heading">
-                  <img src={theme === "dark" ? one : one_light} />
+    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}>
+      <Container>
+        <div className="step-main-wrapper">
+          <Row>
+            <Col className="d-flex d-lg-block justify-content-center">
+              <div className="step-main-heading">
+                <h4 style={{ color: theme === "dark" ? "#fff" : "#040815" }}>
+                  Get Started in 3 Simple Steps
+                </h4>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={4} className="d-flex justify-content-center">
+              <div>
+                <div className="step-cards-wrapper">
+                  <div className="step-card-one-heading">
+                    <img src={theme === "dark" ? one : one_light} />
+                  </div>
+
+                  <img src={theme === "dark" ? C1 : m1} alt="..." />
                 </div>
-                <img src={theme === "dark" ? C1 : c1light} alt="..." />
-              </div>
-              <div className="step-card-down-heading d-flex align-items-center">
-                <img src={theme === "dark" ? star : lightStar} alt="..." />
-                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
-                  Select your strategy
-                </h1>
-              </div>
-            </div>
-          </Col>
-          <Col lg={4} className="d-flex justify-content-center">
-            <div>
-              <div className="step-cards-wrapper">
-                <div className="step-card-one-heading">
-                  <img src={theme === "dark" ? two : twolight} />
+                <div className="step-card-down-heading d-flex align-items-center">
+                  <img src={theme === "dark" ? star : lightStar} alt="..." />
+                  <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                    Select your strategy
+                  </h1>
                 </div>
-                <img src={theme === "dark" ? C2 : c2light} alt="..." />
               </div>
-              <div className="step-card-down-heading d-flex align-items-center">
-                <img
-                  src={theme === "dark" ? connect : connectlight}
-                  alt="..."
-                />
-                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
-                  Connect your brokerage account
-                </h1>
-              </div>
-            </div>
-          </Col>
-          <Col lg={4} className="d-flex justify-content-center">
-            <div>
-              <div className="step-cards-wrapper">
-                <div className="step-card-one-heading">
-                  <img src={theme === "dark" ? three : threelight} />
+            </Col>
+            <Col lg={4} className="d-flex justify-content-center">
+              <div>
+                <div className="step-cards-wrapper">
+                  <div className="step-card-one-heading">
+                    <img src={theme === "dark" ? two : twolight} />
+                  </div>
+                  <img src={theme === "dark" ? C2 : m2} alt="..." />
                 </div>
-                <img src={theme === "dark" ? c3 : c3light} alt="..." />
+                <div className="step-card-down-heading d-flex align-items-center">
+                  <img
+                    src={theme === "dark" ? connect : connectlight}
+                    alt="..."
+                  />
+                  <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                    Connect your brokerage account
+                  </h1>
+                </div>
               </div>
-              <div className="step-card-down-heading d-flex align-items-center">
-                <img src={theme === "dark" ? th : thlight} alt="..." />
-                <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
-                  Automatically track your favourite fund
-                </h1>
+            </Col>
+            <Col lg={4} className="d-flex justify-content-center">
+              <div>
+                <div className="step-cards-wrapper">
+                  <div className="step-card-one-heading">
+                    <img src={theme === "dark" ? three : threelight} />
+                  </div>
+                  <img src={theme === "dark" ? c3 : m3} alt="..." />
+                </div>
+                <div className="step-card-down-heading d-flex align-items-center">
+                  <img src={theme === "dark" ? th : thlight} alt="..." />
+                  <h1 style={{ color: theme === "dark" ? "#fff" : "#131825" }}>
+                    Automatically track your favourite fund
+                  </h1>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </div>
-    </Container>
+            </Col>
+          </Row>
+        </div>
+      </Container>
     </div>
- 
   );
 };
 

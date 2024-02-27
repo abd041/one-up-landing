@@ -1,5 +1,6 @@
 .step-main-wrapper {
   padding: 120px 0px;
+  
 }
 
 .step-main-heading {
@@ -26,6 +27,7 @@
   justify-content: center;
   position: relative;
   margin-bottom: 24px;
+  background-color: #F3F5F7;
 }
 
 .step-cards-wrapper > img {

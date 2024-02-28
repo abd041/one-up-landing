@@ -5,7 +5,8 @@
 
 .benfit-light-theme{
   background: linear-gradient(180deg, #ECF1FF 0%,  #FFF 100%);
-  border-bottom: 1px solid #DDE3F6;
+  border-bottom:1px solid #deddf6; 
+ 
 }
 
 .benefit-main-wrapper-first {
@@ -15,6 +16,8 @@
 }
 .benefit-main-wrapper-first-light{
   padding: 180px 0px;
+  border-bottom: 1px solid #deddf6; 
+  border-top:1px solid #deddf6; 
 }
 
 .benefit-left-heading {

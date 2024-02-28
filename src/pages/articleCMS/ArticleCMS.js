@@ -19,8 +19,10 @@ import updated from "../../assets/dark/about/updated.png";
 import fblight from "../../assets/light/fb_light.png";
 import instalight from "../../assets/light/insta_light.png";
 import nextLight from "../../assets/light/nextlight.png";
-import {FacebookShareButton} from "react-share";
+import { FacebookShareButton } from "react-share";
 import ArticleNavigation from "../../components/Nav/ArticleNavigation";
+import { IoMailOutline } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
 
 const ArticleCMS = () => {
   const { theme } = useTheme();
@@ -31,11 +33,20 @@ const ArticleCMS = () => {
   const articleUrl = "https://one-up-landing.vercel.app/ArticleCMS";
 
   const handleShare = () => {
+    const emailSubject = encodeURIComponent("Check out this article!");
+    const emailBody = encodeURIComponent(
+      `Hey there,\n\nI thought you might be interested in reading this article:\n\n${articleUrl}`
+    );
 
-    window.open(`https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
-
+    window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
   };
 
+  const handleShareLinkdIn = () => {
+    const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      articleUrl
+    )}`;
+    window.open(linkedinShareUrl, "_blank");
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -94,85 +105,127 @@ const ArticleCMS = () => {
 
   return (
     <div
-      className={theme === "dark" ? "about-page-main-wrapper-dark" : "white-background-wrap"}
+      className={
+        theme === "dark"
+          ? "about-page-main-wrapper-dark"
+          : "white-background-wrap"
+      }
       ref={contentRef}
     >
       <ArticleNavigation />
       {!reachedLastHeading && (
-          <div className="toc-container mx-auto">
-            <div className="list-table-of-content">
-              <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
-                TABLE OF CONTENT
-              </h4>
-            </div>
-            <ListGroup as="ul">
-              {headings.map((heading) => {
-                const firstThreeWords = heading.textContent
-                  .split(" ")
-                  .slice(0, 7)
-                  .join(" ");
-                return (
-                  <ListGroup.Item
-                    as="li"
-                    key={`toc-${heading.id}`}
-                    id={`toc-${heading.id}`}
-                    action
-                    onClick={() => handleClick(heading.id)}
-                    className={
-                      theme === "dark"
-                        ? "list-main-items-article"
-                        : "list-main-items-article-light"
-                    }
-                  >
-                    {`${firstThreeWords}`}
-                  </ListGroup.Item>
-                );
-              })}
-            </ListGroup>
+        <div className="toc-container mx-auto">
+          <div className="list-table-of-content">
+            <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+              TABLE OF CONTENT
+            </h4>
           </div>
-        )}
+          <ListGroup as="ul">
+            {headings.map((heading) => {
+              const firstThreeWords = heading.textContent
+                .split(" ")
+                .slice(0, 7)
+                .join(" ");
+              return (
+                <ListGroup.Item
+                  as="li"
+                  key={`toc-${heading.id}`}
+                  id={`toc-${heading.id}`}
+                  action
+                  onClick={() => handleClick(heading.id)}
+                  className={
+                    theme === "dark"
+                      ? "list-main-items-article"
+                      : "list-main-items-article-light"
+                  }
+                >
+                  {`${firstThreeWords}`}
+                </ListGroup.Item>
+              );
+            })}
+          </ListGroup>
+        </div>
+      )}
       <Container>
-     
         <Row className="text-center text-lg-start">
           <Col className="mx-auto" lg={8}>
             <div className="aricle-cms-main-wrapper mx-auto">
               <div className="aricle-cms-main-heading">
-                <h4 className="d-flex align-items-center" style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
-                  Resources <span style={{ color: theme === "dark" ? "#fff" : "#11172A" }} >&gt;</span>
-                </h4>
-                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>Article</h4>
-                <p className="d-flex align-items-center"
-                  style={{ color: theme === "dark" ? "#B2B2B2" : "#90A3BF" }}
-               
+                <h4
+                  className="d-flex align-items-center"
+                  style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
                 >
-                  <span     style={{ color: theme === "dark" ? "#fff" : "#90A3BF" }}
-                >&gt;</span>The Silent Threat: How Mutual Fund Fees Erode
-                  Your Wealth Over Time
+                  Resources{" "}
+                  <span
+                    style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                  >
+                    &gt;
+                  </span>
+                </h4>
+                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                  Article
+                </h4>
+                <p
+                  className="d-flex align-items-center"
+                  style={{ color: theme === "dark" ? "#B2B2B2" : "#90A3BF" }}
+                >
+                  <span
+                    style={{ color: theme === "dark" ? "#fff" : "#90A3BF" }}
+                  >
+                    &gt;
+                  </span>
+                  The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over
+                  Time
                 </p>
               </div>
               <div className="aricle-cms-main-para">
-                <h4  style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
                   The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over
                   Time
                 </h4>
               </div>
               <div className="d-flex justify-content-between align-items-center date-in-article-main">
                 <div className="date-in-article">
-                  <p    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}
-                 >Feb 1, 2024 . 6 min read</p>
+                  <p
+                    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}
+                  >
+                    Feb 1, 2024 . 6 min read
+                  </p>
                 </div>
-                <div>
-                <FacebookShareButton 
-                url={"https://one-up-landing.vercel.app/ArticleCMS"}
-                quote={"The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over Time"}
-                hashtag="#oneup">
-                 <img
-                    src={theme === "dark" ? fb : fblight}
-                    className="date-in-image"
-                  />
-              </FacebookShareButton>
-               
-                  <img src={theme === "dark" ? insta : instalight}  onClick={handleShare} />
+                <div className="d-flex">
+                  <FacebookShareButton
+                    url={"https://one-up-landing.vercel.app/ArticleCMS"}
+                    quote={
+                      "The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over Time"
+                    }
+                    hashtag="#oneup"
+                  >
+                    <img
+                      src={theme === "dark" ? fb : fblight}
+                      className="date-in-image"
+                    />
+                  </FacebookShareButton>
+                  <div
+                    className={
+                      theme === "dark"
+                        ? "artilce-email-link-dark"
+                        : "artilce-email-link"
+                    }
+                    style={{ marginRight: "24px" }}
+                    onClick={handleShare}
+                  >
+                    <IoMailOutline style={{ width: "20px", height: "20px" }} />
+                  </div>
+                  <div
+                    className={
+                      theme === "dark"
+                        ? "artilce-email-link-dark"
+                        : "artilce-email-link"
+                    }
+                    onClick={handleShareLinkdIn}
+                  >
+                    <FaLinkedin style={{ width: "20px", height: "20px" }} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -209,7 +262,11 @@ const ArticleCMS = () => {
         <AbouPara title="Mutual fund fees, though often overlooked, have a tangible impact on your investments. By understanding and addressing these fees, you can make smarter choices for your financial future. OneUp’s innovative approach, merging tech-driven active management with a cost-effective subscription model, presents a compelling alternative. It’s time to step into a world where your investments work harder for you, free from the drag of traditional fees. Join OneUp and take control of your financial destiny." />
       </Container>
       <div
-        className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
+        className={
+          theme === "dark"
+            ? "articles-page-main-wrapper-dark"
+            : "white-background-wrap"
+        }
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
           <Row className="text-center text-lg-start">
@@ -220,7 +277,10 @@ const ArticleCMS = () => {
             </Col>
           </Row>
           <Row className="">
-            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
+            <Col
+              lg={6}
+              className="d-flex justify-content-center article-card-first-row"
+            >
               <Link to="/ArticleCMS1">
                 <div
                   className={
@@ -268,7 +328,10 @@ const ArticleCMS = () => {
                 </div>
               </Link>
             </Col>
-            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
+            <Col
+              lg={6}
+              className="d-flex justify-content-center article-card-first-row"
+            >
               <Link to="/ArticleCMS2">
                 <div
                   className={
@@ -317,9 +380,10 @@ const ArticleCMS = () => {
             </Col>
           </Row>
           <Row>
-        
-
-            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
+            <Col
+              lg={6}
+              className="d-flex justify-content-center article-card-first-row"
+            >
               <Link to="/ArticleCMS3">
                 <div
                   className={
@@ -379,11 +443,12 @@ const ArticleCMS = () => {
             <ExpertTeam />
           </Container>
         </div>
-        <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
-     
-        <Container className="mx-sm-auto mx-0">
-          <FAQs />
-        </Container>
+        <div
+          className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}
+        >
+          <Container className="mx-sm-auto mx-0">
+            <FAQs />
+          </Container>
         </div>
         <JoinNow />
         <Footer />

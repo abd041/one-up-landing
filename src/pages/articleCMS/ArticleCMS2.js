@@ -22,6 +22,8 @@ import instalight from "../../assets/light/insta_light.png";
 import nextLight from "../../assets/light/nextlight.png";
 import { FacebookShareButton } from "react-share";
 import ArticleNavigation from "../../components/Nav/ArticleNavigation";
+import { IoMailOutline } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
 const ArticleCMS2 = () => {
   const { theme } = useTheme();
   const [headings, setHeadings] = useState([]);
@@ -32,11 +34,20 @@ const ArticleCMS2 = () => {
   const contentShow = useRef(null);
 
   const articleUrl = "https : //one-up-landing.vercel.app/ArticleCMS2";
-
   const handleShare = () => {
+    const emailSubject = encodeURIComponent("Check out this article!");
+    const emailBody = encodeURIComponent(
+      `Hey there,\n\nI thought you might be interested in reading this article:\n\n${articleUrl}`
+    );
 
-    window.open(`https : //www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+    window.location.href = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+  };
 
+  const handleShareLinkdIn = () => {
+    const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      articleUrl
+    )}`;
+    window.open(linkedinShareUrl, "_blank");
   };
 
 
@@ -163,18 +174,40 @@ const ArticleCMS2 = () => {
                   <p       style={{ color :  theme === "dark" ? "#B2B2B2"  :  "#596780" }}
               >Feb 1, 2024 . 6 min read</p>
                 </div>
-                <div>
-                <FacebookShareButton
-                url={"https : //one-up-landing.vercel.app/ArticleCMS2"}
-                quote={"Active vs Passive Management :  balancing fees for investor benefit"}
-                hashtag="#oneup">
-                 <img
-                    src={theme === "dark" ? fb  :  fblight}
-                    className="date-in-image"
-                  />
-              </FacebookShareButton>
-               
-                  <img src={theme === "dark" ? insta  :  instalight}  onClick={handleShare} />
+                <div className="d-flex">
+                  <FacebookShareButton
+                    url={"https://one-up-landing.vercel.app/ArticleCMS"}
+                    quote={
+                      "The Silent Threat: How Mutual Fund Fees Erode Your Wealth Over Time"
+                    }
+                    hashtag="#oneup"
+                  >
+                    <img
+                      src={theme === "dark" ? fb : fblight}
+                      className="date-in-image"
+                    />
+                  </FacebookShareButton>
+                  <div
+                    className={
+                      theme === "dark"
+                        ? "artilce-email-link-dark"
+                        : "artilce-email-link"
+                    }
+                    style={{ marginRight: "24px" }}
+                    onClick={handleShare}
+                  >
+                    <IoMailOutline style={{ width: "20px", height: "20px" }} />
+                  </div>
+                  <div
+                    className={
+                      theme === "dark"
+                        ? "artilce-email-link-dark"
+                        : "artilce-email-link"
+                    }
+                    onClick={handleShareLinkdIn}
+                  >
+                    <FaLinkedin style={{ width: "20px", height: "20px" }} />
+                  </div>
                 </div>
               </div>
             </div>

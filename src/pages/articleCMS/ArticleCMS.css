@@ -9,6 +9,30 @@
   background-color: white;
 }
 
+
+.artilce-email-link{
+  display: flex;
+padding: 14px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 100px;
+border: 1px solid var(--Secondary-200, #C3D4E9);
+background: #FFF;
+cursor: pointer;
+}
+
+.artilce-email-link-dark{
+  display: flex;
+padding: 14px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 100px;
+border: 1px solid #4D4D4E;
+background: #0D0D0D;
+cursor: pointer;
+}
 .toc-container.scrollable {
   display: none;
 }

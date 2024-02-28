@@ -14,13 +14,11 @@ const Footer = () => {
     >
       <div className="footer-main-wrapper">
         <div className="footer-b-1">
-          <h3 style={{ color: theme === "dark" ? "#fff" : "#000" }}>
-            One<span>Up</span>
-          </h3>
+         <img src={theme === "dark" ? logo:LogoLight}/>
         </div>
         <div className="footer-b-2">
           <div className="footer-heading">
-            <h1 style={{ color: theme === "dark" ? "#FFF" : "#1A202C" }}>
+            <h1 style={{ color: theme === "dark" ? "#FFF" : "#1A202C" , marginLeft:"-4px"}}>
               Quick Links
             </h1>
           </div>
@@ -37,14 +35,14 @@ const Footer = () => {
               Pricing
             </h2>
           </Link>
-          <div className="footer-desc">
+          {/* <div className="footer-desc">
             <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
               Resources
             </h2>
-          </div>
+          </div> */}
           <Link to="/about" className="footer-desc">
             <h2 style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>
-              About
+              About Us
             </h2>
           </Link>
         </div>

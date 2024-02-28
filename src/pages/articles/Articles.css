@@ -169,7 +169,7 @@ overflow-x: clip;
 
 @media screen and (max-width: 768px) {
   .article-card-first-row {
-    margin-bottom: 0px;
+    margin-bottom: 16px;
   }
 
   .articles-card-main-wrapper {

@@ -33,11 +33,11 @@ const ArticleCMS3 = () => {
   const articleUrl = "https://one-up-landing.vercel.app/ArticleCMS2";
 
   const handleShare = () => {
-
-    window.open(`https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`, '_blank');
-
+    window.open(
+      `https://www.instagram.com/?url=${encodeURIComponent(articleUrl)}`,
+      "_blank"
+    );
   };
-
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -96,55 +96,76 @@ const ArticleCMS3 = () => {
   };
   return (
     <div
-      className={theme === "dark" ? "about-page-main-wrapper-dark" : "white-background-wrap"}
+      className={
+        theme === "dark"
+          ? "about-page-main-wrapper-dark"
+          : "white-background-wrap"
+      }
       ref={contentRef}
     >
       <ArticleNavigation />
+      {!reachedLastHeading && (
+        <div className="toc-container">
+          <div className="list-table-of-content">
+            <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+              TABLE OF CONTENT
+            </h4>
+          </div>
+          <ListGroup as="ul">
+            {headings.map((heading) => {
+              const firstThreeWords = heading.textContent
+                .split(" ")
+                .slice(0, 7)
+                .join(" ");
+              return (
+                <ListGroup.Item
+                  as="li"
+                  key={`toc-${heading.id}`}
+                  id={`toc-${heading.id}`}
+                  action
+                  onClick={() => handleClick(heading.id)}
+                  className={
+                    theme === "dark"
+                      ? "list-main-items-article"
+                      : "list-main-items-article-light"
+                  }
+                >
+                  {`${firstThreeWords}`}
+                </ListGroup.Item>
+              );
+            })}
+          </ListGroup>
+        </div>
+      )}
       <Container>
-        {!reachedLastHeading && (
-       <div className="toc-container">
-       <div className="list-table-of-content">
-         <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
-           TABLE OF CONTENT
-         </h4>
-       </div>
-       <ListGroup as="ul">
-         {headings.map((heading) => {
-           const firstThreeWords = heading.textContent
-             .split(" ")
-             .slice(0, 2)
-             .join(" ");
-           return (
-             <ListGroup.Item
-               as="li"
-               key={`toc-${heading.id}`}
-               id={`toc-${heading.id}`}
-               action
-               onClick={() => handleClick(heading.id)}
-               className={
-                 theme === "dark"
-                   ? "list-main-items-article"
-                   : "list-main-items-article-light"
-               }
-             >
-               {`${firstThreeWords}`}
-             </ListGroup.Item>
-           );
-         })}
-       </ListGroup>
-     </div>
-        )}
         <Row>
           <Col className="mx-auto" lg={8}>
             <div className="aricle-cms-main-wrapper mx-auto">
               <div className="aricle-cms-main-heading">
-                <h4 className="d-flex align-items-center" style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
-                  Resources <span style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>&gt;</span>
+                <h4
+                  className="d-flex align-items-center"
+                  style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                >
+                  Resources{" "}
+                  <span
+                    style={{ color: theme === "dark" ? "#fff" : "#11172A" }}
+                  >
+                    &gt;
+                  </span>
                 </h4>
-                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>Article</h4>
-                <p className="d-flex align-items-center"  style={{ color: theme === "dark" ? "#B2B2B2" : "#90A3BF" }}>
-                  <span  style={{ color: theme === "dark" ? "#fff" : "#90A3BF" }}>&gt;</span>Empowering investors with full control: the
-                  OneUp commitment
+                <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
+                  Article
+                </h4>
+                <p
+                  className="d-flex align-items-center"
+                  style={{ color: theme === "dark" ? "#B2B2B2" : "#90A3BF" }}
+                >
+                  <span
+                    style={{ color: theme === "dark" ? "#fff" : "#90A3BF" }}
+                  >
+                    &gt;
+                  </span>
+                  Empowering investors with full control: the OneUp commitment
                 </p>
               </div>
               <div className="aricle-cms-main-para">
@@ -154,20 +175,30 @@ const ArticleCMS3 = () => {
               </div>
               <div className="d-flex justify-content-between align-items-center date-in-article-main">
                 <div className="date-in-article">
-                  <p    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}>Feb 1, 2024 . 6 min read</p>
+                  <p
+                    style={{ color: theme === "dark" ? "#B2B2B2" : "#596780" }}
+                  >
+                    Feb 1, 2024 . 6 min read
+                  </p>
                 </div>
                 <div>
-                <FacebookShareButton
-                url={"https://one-up-landing.vercel.app/ArticleCMS3"}
-                quote={"Empowering investors with full control: the OneUp commitment"}
-                hashtag="#oneup">
-                 <img
-                    src={theme === "dark" ? fb : fblight}
-                    className="date-in-image"
+                  <FacebookShareButton
+                    url={"https://one-up-landing.vercel.app/ArticleCMS3"}
+                    quote={
+                      "Empowering investors with full control: the OneUp commitment"
+                    }
+                    hashtag="#oneup"
+                  >
+                    <img
+                      src={theme === "dark" ? fb : fblight}
+                      className="date-in-image"
+                    />
+                  </FacebookShareButton>
+
+                  <img
+                    src={theme === "dark" ? insta : instalight}
+                    onClick={handleShare}
                   />
-              </FacebookShareButton>
-               
-                  <img src={theme === "dark" ? insta : instalight}  onClick={handleShare}/>
                 </div>
               </div>
             </div>
@@ -202,18 +233,22 @@ const ArticleCMS3 = () => {
         <AbouPara title="OneUp isn't just a platform; it's a movement towards smarter, more personalized investing. We'rehere to make sure your investments work tirelessly for you. Embrace control, transparency, and personalization with OneUp. Step into a new era of investing" />
       </Container>
       <div
-        className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
+        className={
+          theme === "dark"
+            ? "articles-page-main-wrapper-dark"
+            : "white-background-wrap"
+        }
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
-          <Row>
+          <Row  className="text-center text-lg-start">
             <Col className="article-resousrce-first-wrapper">
               <div className="article-investing-heading">
                 <h1>Other Articles</h1>
               </div>
             </Col>
           </Row>
-          <Row className="article-card-first-row">
-            <Col lg={6}>
+          <Row>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS">
                 <div
                   className={
@@ -262,7 +297,7 @@ const ArticleCMS3 = () => {
               </Link>
             </Col>
 
-            <Col lg={6}>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS1">
                 <div
                   className={
@@ -312,7 +347,7 @@ const ArticleCMS3 = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={6}>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS2">
                 <div
                   className={
@@ -372,11 +407,12 @@ const ArticleCMS3 = () => {
             <ExpertTeam />
           </Container>
         </div>
-        <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
-     
-        <Container className="mx-sm-auto mx-0">
-          <FAQs />
-        </Container>
+        <div
+          className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}
+        >
+          <Container className="mx-sm-auto mx-0">
+            <FAQs />
+          </Container>
         </div>
         <JoinNow />
         <Footer />

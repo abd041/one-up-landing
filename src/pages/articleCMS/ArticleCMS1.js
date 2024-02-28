@@ -99,8 +99,7 @@ const ArticleCMS1 = () => {
       ref={contentRef}
     >
       <ArticleNavigation />
-      <Container>
-        {!reachedLastHeading && (
+      {!reachedLastHeading && (
           <div className="toc-container">
             <div className="list-table-of-content">
               <h4 style={{ color: theme === "dark" ? "#fff" : "#11172A" }}>
@@ -111,7 +110,7 @@ const ArticleCMS1 = () => {
               {headings.map((heading) => {
                 const firstThreeWords = heading.textContent
                   .split(" ")
-                  .slice(0, 2)
+                  .slice(0, 7)
                   .join(" ");
                 return (
                   <ListGroup.Item
@@ -133,7 +132,9 @@ const ArticleCMS1 = () => {
             </ListGroup>
           </div>
         )}
-        <Row>
+      <Container>
+     
+        <Row >
           <Col className="mx-auto" lg={8}>
             <div className="aricle-cms-main-wrapper mx-auto">
               <div className="aricle-cms-main-heading">
@@ -235,15 +236,15 @@ const ArticleCMS1 = () => {
         className={theme === "dark" ? "articles-page-main-wrapper-dark" : "white-background-wrap"}
       >
         <Container className="articles-page-first-container mx-sm-auto mx-0">
-          <Row>
+          <Row className="text-center text-lg-start">
             <Col className="article-resousrce-first-wrapper">
               <div className="article-investing-heading">
                 <h1>Other Articles</h1>
               </div>
             </Col>
           </Row>
-          <Row className="article-card-first-row">
-            <Col lg={6}>
+          <Row>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS">
                 <div
                   className={
@@ -291,7 +292,7 @@ const ArticleCMS1 = () => {
                 </div>
               </Link>
             </Col>
-            <Col lg={6}>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS2">
                 <div
                   className={
@@ -343,7 +344,7 @@ const ArticleCMS1 = () => {
           <Row>
         
 
-            <Col lg={6}>
+            <Col lg={6} className="d-flex justify-content-center article-card-first-row">
               <Link to="/ArticleCMS3">
                 <div
                   className={

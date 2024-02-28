@@ -19,8 +19,8 @@ const Articles = () => {
   return (
     <div className={theme === "dark" ? "articles-page-main-wrapper-dark" : ""}>
       <Navigation />
-      <Container className="articles-page-first-container mx-sm-auto mx-0">
-        <Row>
+      <Container className="articles-page-first-container">
+        <Row className="text-center text-lg-start">
           <Col className="article-resousrce-first-wrapper">
             <div className="article-resources-heading">
               <h6 style={{ color: theme === "dark" ? "#fff" : "#5573D1" }}>
@@ -40,8 +40,8 @@ const Articles = () => {
             </div>
           </Col>
         </Row>
-        <Row className="article-card-first-row">
-          <Col lg={6}>
+        <Row className="">
+          <Col lg={6} md={12} sm={12} xs={12} className="d-flex justify-content-center article-card-first-row">
             <Link to="/ArticleCMS">
               <div
                 className={
@@ -86,7 +86,7 @@ const Articles = () => {
             </Link>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="d-flex justify-content-center article-card-first-row">
             <Link to="/ArticleCMS1">
               <div
                 className={
@@ -132,7 +132,7 @@ const Articles = () => {
           </Col>
         </Row>
         <Row>
-          <Col lg={6}>
+          <Col lg={6} className="d-flex justify-content-center article-card-first-row">
             <Link to="/ArticleCMS2">
               <div
                 className={
@@ -176,7 +176,7 @@ const Articles = () => {
             </Link>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="d-flex justify-content-center article-card-first-row">
             <Link to="/ArticleCMS3">
               <div
                 className={

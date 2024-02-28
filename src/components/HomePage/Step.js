@@ -28,7 +28,7 @@ import m3 from "../../assets/dark/m3.png";
 const Step = () => {
   const { theme } = useTheme();
   return (
-    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}>
+    <div className={`app ${theme === "dark" ? "dark-theme" : ""}`}>
       <Container>
         <div className="step-main-wrapper">
           <Row>

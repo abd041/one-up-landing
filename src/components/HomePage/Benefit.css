@@ -5,11 +5,6 @@
 
 .benfit-light-theme{
   background: linear-gradient(180deg, #ECF1FF 0%,  #FFF 100%);
-  /* background: 
-  radial-gradient(840px 960px at max(20px, -512px + 50vw) 0%, rgba(78, 106, 191, 0.15) 9.29%, rgba(78, 106, 191, 0) 100%), rgb(255, 255, 255)
-  radial-gradient(520px 520px at calc(max(20px, -512px + 50vw) + min(100vw, 1024px)) 80vh, rgba(78, 106, 191, 0.15) 9.29%, rgba(78, 106, 191, 0) 100%);
-overflow-x: clip; */
-
   border-bottom: 1px solid #DDE3F6;
 }
 

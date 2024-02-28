@@ -9,7 +9,7 @@ import star_white from "../../assets/light/star_white.png";
 const Strategy = () => {
   const { theme } = useTheme();
   return (
-    <div className={`app ${theme === "dark" ? "dark-theme" : "light-theme"}`}>
+    <div className={`app ${theme === "dark" ? "dark-theme" : ""}`}>
       <div className="strategy-main-wrapper">
         <Container>
           <Row>

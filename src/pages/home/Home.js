@@ -17,19 +17,22 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+    <div className={`app ${theme === 'dark' ? 'dark-theme' : ''}`}>
       <Navigation />
       <Hero />
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-mode-for-the-page'}`}>
       <Step />
       <Benefit />
       <Strategy />
-      <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+      <div className={`app ${theme === 'dark' ? 'dark-theme' : ''}`}>
       <Container><FAQs /></Container>
       </div>
-    
+      </div>
+
       <JoinNow />
 
-      <Footer />
+<Footer />
+    
     </div>
   )
 }

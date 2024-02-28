@@ -25,7 +25,7 @@ const Hero = () => {
       className={
         theme === "dark"
           ? "Homepage-Hero-warpper-dark"
-          : "Homepage-Hero-warpper-dark-light"
+          : "light-theme"
       }
     >
       <Container>

@@ -59,8 +59,8 @@ const Strategy = () => {
                           </h5>
                         </div>
                       </div>
-                      <div className="card-main-start">
-                        <img src={theme === "dark" ? stars : star_white} />
+                      <div className={theme === "dark" ?"": "card-main-start"}>
+                        <img src={theme === "dark" ? stars: star_white} />
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const Strategy = () => {
                           </h5>
                         </div>
                       </div>
-                      <div className="card-main-start">
+                      <div className={theme === "dark" ?"": "card-main-start"}>
                         <img src={theme === "dark" ? stars : star_white} />
                       </div>
                     </div>
@@ -165,7 +165,7 @@ const Strategy = () => {
                           </h5>
                         </div>
                       </div>
-                      <div className="card-main-start">
+                      <div className={theme === "dark" ?"": "card-main-start"}>
                         <img src={theme === "dark" ? stars : star_white} />
                       </div>
                     </div>

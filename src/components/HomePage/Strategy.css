@@ -9,6 +9,15 @@
   margin-bottom: 56px;
 }
 
+
+.card-main-start{
+  display: flex;
+padding: 0px 16px;
+justify-content: center;
+align-items: center;
+  border-radius: 7px;
+background: #FAFAFA;
+}
 .strategy-main-heading > h4 {
   text-align: left;
   font-family: Satoshi;
